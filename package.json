@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier src/ --write",
-    "prepare": "husky install"
+    "com": "dlx shadcn-ui@latest add"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
