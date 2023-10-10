@@ -9,7 +9,11 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier src/ --write",
+    "fmt": "pnpm prettier && pnpm lint",
     "com": "dlx shadcn-ui@latest add"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": "pnpm fmt"
   },
   "dependencies": {
     "@nextui-org/react": "^2.1.13",

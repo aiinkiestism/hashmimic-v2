@@ -1,1 +1,1 @@
-export * from './NextUIProvider'
+export * from "./NextUIProvider";
