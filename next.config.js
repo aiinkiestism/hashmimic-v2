@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  transpilePackages: ['three'],
   experimental: {
-    // disabling for turbopack
-    // typedRoutes: true,
+    typedRoutes: true,
   },
 }
 
