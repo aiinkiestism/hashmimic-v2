@@ -7,9 +7,9 @@ export function AppCanvas({
 }) {
   return (
     <Canvas
+      shadowMap
       style={{
-      // background: 'rgba(6, 7, 19, 0.1)',
-      background: '#fff',
+      background: 'rgba(6, 7, 19, 0.001)',
       width: '100%',
       height: '100vh',
       position: 'fixed'
