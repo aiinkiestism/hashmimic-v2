@@ -11,7 +11,7 @@ export default function Home() {
       <AppCanvas>
         <Clouds />
         <AppText3D position={[0, 0, -14]} text='Hashmimic' />
-        <directionalLight position={[0, 5, 2.5]} intensity={4} />
+        <directionalLight position={[0, 5, 2.5]} intensity={2} />
         <directionalLight
           castShadow
           position={[-5, 5, 2.5]}
