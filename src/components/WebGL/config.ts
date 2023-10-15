@@ -18,4 +18,6 @@ export const HOME_TRANSMISSION_MATERIAL_CONFIG = {
   envMapIntensity: 1,
   reflectivity: 0.05,
   shadow: '#87ceeb',
+  emissive: '#fff',
+  emissiveIntensity: -0.075,
 };
