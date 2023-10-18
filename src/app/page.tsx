@@ -2,13 +2,62 @@
 
 import Link from "next/link";
 import { AppCanvas, Clouds, AppText3D } from '@/components'
-import { Environment, Lightformer, AccumulativeShadows, RandomizedLight } from "@react-three/drei";
+import { Environment, Lightformer, Cloud } from "@react-three/drei";
+import { useEffect, useRef, useState } from "react";
+import { useFrame, useThree, extend } from '@react-three/fiber'
+import * as THREE from 'three'
+import { MeshLineMaterial } from 'meshline';
+
+const vertexShader = `
+  void main() {
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    gl_PointSize = 10.0;
+  }
+`;
+
+const fragmentShader = `
+  void main() {
+    gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+  }
+`;
+
+const Cursor = () => {
+  const cursorRef = useRef();
+  const { viewport } = useThree()
+
+  useFrame(({ mouse }) => {
+    const x = (mouse.x * viewport.width) / 2
+    const y = (mouse.y * viewport.height) / 2
+    // @ts-ignore
+    cursorRef.current?.position.set(x, y, 0)
+  })
+  
+  return (
+    // @ts-ignore
+    <points ref={cursorRef}>
+      <bufferGeometry attach="geometry">
+        <bufferAttribute
+          attachObject={['attributes', 'position']}
+          count={1}
+          // @ts-ignore
+          array={[0, 0, 0]}
+          itemSize={3}
+        />
+      </bufferGeometry>
+      <shaderMaterial
+        attach="material"
+        args={[{ vertexShader, fragmentShader, transparent: true }]}
+      />
+    </points>
+  );
+};
 
 export default function Home() {
 
   return (
     <>
       <AppCanvas>
+        {/* <Cursor /> */}
         <Clouds />
         <AppText3D position={[0, 0, -14]} text='Hashmimic' />
         <directionalLight position={[0, 5, 2.5]} intensity={2} />
@@ -29,7 +78,7 @@ export default function Home() {
           </group>
         </Environment>
       </AppCanvas>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      {/* <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
           <div className="fixed left-0 top-0 flex w-full lg:static" />
           <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
@@ -41,7 +90,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </main>
+      </main> */}
     </>
   );
 }

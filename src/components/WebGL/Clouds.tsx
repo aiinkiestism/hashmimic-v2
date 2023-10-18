@@ -7,6 +7,7 @@ export function Clouds() {
         position={[-0.25, -1.75, -1]}
         opacity={0.115}
         speed={-0.4}
+        // @ts-ignore
         width={18}
         depth={2.6}
         segments={24}
@@ -16,6 +17,7 @@ export function Clouds() {
         position={[-0.25, 2, -1]}
         opacity={0.115}
         speed={-0.4}
+        // @ts-ignore
         width={24}
         depth={2.6}
         segments={18}
@@ -25,6 +27,7 @@ export function Clouds() {
         position={[1, 0.5, -1]}
         opacity={0.115}
         speed={0.2}
+        // @ts-ignore
         width={24}
         depth={2.6}
         segments={24}
@@ -34,6 +37,7 @@ export function Clouds() {
         position={[0.25, 0, -1]}
         opacity={0.115}
         speed={0.4}
+        // @ts-ignore
         width={18}
         depth={2.6}
         segments={20}
@@ -43,6 +47,7 @@ export function Clouds() {
         position={[8, 4, 0]}
         opacity={0.115}
         speed={-0.4}
+        // @ts-ignore
         width={15}
         depth={2.6}
         segments={26}
@@ -52,6 +57,7 @@ export function Clouds() {
         position={[-8, -2, 0]}
         opacity={0.115}
         speed={0.2}
+        // @ts-ignore
         width={20}
         depth={2.6}
         segments={18}
@@ -61,6 +67,7 @@ export function Clouds() {
         position={[-4, 2, 0]}
         opacity={0.115}
         speed={0.4}
+        // @ts-ignore
         width={14}
         depth={2.6}
         segments={21}
@@ -70,6 +77,7 @@ export function Clouds() {
         position={[5, -2.25, 0]}
         opacity={0.15}
         speed={0.2}
+        // @ts-ignore
         width={12}
         depth={2.6}
         segments={20}

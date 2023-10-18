@@ -12,7 +12,7 @@ interface TextProps {
 export const AppText3D: React.FC<TextProps> = (props) => {
   const { text } = props;
   const font = '/home_center.json';
-  const texture = useLoader(RGBELoader, process.env.NEXT_PUBLIC_HOME_FONT_TEXTURE);
+  const texture = useLoader(RGBELoader, process.env.NEXT_PUBLIC_HOME_FONT_TEXTURE ?? '');
 
   return (
     <>
