@@ -1,7 +1,8 @@
 import { useThree, useFrame } from "@react-three/fiber";
-import { useRef, useMemo, RefObject } from "react";
+import { useRef, useMemo, RefObject, useState, useEffect } from "react";
 import * as THREE from 'three'
 import { MathUtils } from "three";
+import { useWindowSize } from "react-use"
 
 const vertexShader = `
 uniform vec2 u_resolution;
@@ -119,9 +120,9 @@ varying float vDisplacement;
 void main() {
   float distort = 2.0 * vDisplacement * u_intensity;
 
-  vec3 color = vec3(abs(vUv - 0.5) * 2.0  * (1.0 - distort), 1.0);
+  vec3 color = vec3(abs(vUv - 0.5) * 2.0  * (1.0 - distort), 0.7);
   
-  gl_FragColor = vec4(color ,1.0);
+  gl_FragColor = vec4(color ,0.8);
 }
 `;
 
@@ -129,10 +130,12 @@ export const Cursor = (
   // { hover }:
   // { hover: boolean; }
 ) => {
-  const cursorRef: RefObject<THREE.Mesh> = useRef<THREE.Mesh>(null);
-  const { viewport } = useThree();
-  const hover: RefObject<Boolean> = useRef<boolean>(false);
   const BASE_INTENSITY = 0.2;
+  const cursorRef: RefObject<THREE.Mesh> = useRef<THREE.Mesh>(null);
+  const hover: RefObject<Boolean> = useRef<boolean>(false);
+  const [size, setSize] = useState<number>(0.4)
+  const { viewport } = useThree();
+  const { width } = useWindowSize();
 
   const uniforms = useMemo(() => {
     const u_resolution = { value: new THREE.Vector2() };
@@ -153,10 +156,14 @@ export const Cursor = (
     };
   }, [viewport]);
 
+  useEffect(() => {
+    if (width < 600) setSize(0.2)
+  }, [width])
+
   useFrame(({ mouse, clock }: { mouse: THREE.Vector2; clock: THREE.Clock; }) => {
     const x = (mouse.x * viewport.width) * 1.5 / 2;
     const y = (mouse.y * viewport.height) * 1.5 / 2;
-    const z = -2;
+    const z = 0.1;
     const material = cursorRef.current?.material as THREE.ShaderMaterial;
 
     uniforms.u_mouse.value.x = x;
@@ -176,7 +183,7 @@ export const Cursor = (
 
   return (
     <mesh ref={cursorRef}>
-      <icosahedronGeometry args={[0.5, 20]} />
+      <icosahedronGeometry args={[size, 20]} />
       <shaderMaterial
         attach="material"
         vertexShader={vertexShader}
