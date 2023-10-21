@@ -12,7 +12,7 @@ export const HOME_TRANSMISSION_MATERIAL_CONFIG = {
   distortionScale: 1,
   temporalDistortion: 0.4,
   ior: 0.83,
-  transmission: 0.8,
+  transmission: 0.6,
   color: '#ffc300',
   gColor: '#87ceeb',
   envMapIntensity: 1,
