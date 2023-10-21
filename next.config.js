@@ -4,7 +4,7 @@ const { DEPLOY_TARGET } = process.env;
 
 const nextConfig = {
   transpilePackages: ['three'],
-  output: 'export',
+  output: DEPLOY_TARGET === 'fleek' ? 'export' : 'standalone',
   distDir: 'dist',
   experimental: {
     typedRoutes: true,
