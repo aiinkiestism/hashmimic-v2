@@ -1,5 +1,6 @@
 export * from './AppCanvas'
 export * from './Clouds'
-export * from './AppText3D'
+export * from './HomeTitle3D'
+export * from './HomeSubTitle3D'
 export * from './config'
 export * from './Cursor'
