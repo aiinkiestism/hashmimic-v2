@@ -12,7 +12,7 @@ interface TextProps {
 
 export const HomeSubTitle3D: React.FC<TextProps> = (props) => {
   const { text, size } = props;
-  const font = '/home_center.json';
+  const font = '/DancingScript_Regular.json';
   const texture = useLoader(RGBELoader, process.env.NEXT_PUBLIC_HOME_FONT_TEXTURE ?? '');
 
   return (
@@ -31,7 +31,7 @@ export const HomeSubTitle3D: React.FC<TextProps> = (props) => {
             curveSegments={128}
             bevelThickness={0.01}>
             {text}
-            <MeshTransmissionMaterial {...HOME_TRANSMISSION_MATERIAL_CONFIG} background={texture} />
+            <MeshTransmissionMaterial {...HOME_TRANSMISSION_MATERIAL_CONFIG['subTitle']} background={texture} />
           </Text3D>
         </Center>
       </group>

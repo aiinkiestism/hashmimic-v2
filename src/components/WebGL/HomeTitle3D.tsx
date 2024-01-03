@@ -31,7 +31,7 @@ export const HomeTitle3D: React.FC<TextProps> = (props) => {
             curveSegments={128}
             bevelThickness={0.01}>
             {text}
-            <MeshTransmissionMaterial {...HOME_TRANSMISSION_MATERIAL_CONFIG} background={texture} />
+            <MeshTransmissionMaterial {...HOME_TRANSMISSION_MATERIAL_CONFIG['title']} background={texture} />
           </Text3D>
         </Center>
       </group>
