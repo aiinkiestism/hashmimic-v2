@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link";
-import { AppCanvas, Clouds, HomeTitle3D, HomeSubTitle3D, Cursor } from '@/components'
+import { AppCanvas, Clouds, HomeText3D, Cursor, FontProps } from '@/components'
 import { Environment, Lightformer } from "@react-three/drei";
 import { Suspense } from "react";
 
@@ -13,11 +13,11 @@ export default function Home() {
         <Suspense fallback={null}>
           <Cursor />
           <Clouds />
-          <HomeTitle3D position={[-5.15, -0.15, -0.6]} size={[0.1, 0.125, 0.08]} text='©' />
-          <HomeTitle3D position={[0.65, -0.15, -0.6]} size={[0.28, 0.3, 0.16]} text='Hashmimic' />
-          <HomeSubTitle3D position={[0.75, 2.0, 0.08]} size={[0.1, 0.125, 0.08]} text='Who?' />
-          <HomeSubTitle3D position={[-2.15, -1.75, 0.08]} size={[0.1, 0.125, 0.08]} text='Music' />
-          <HomeSubTitle3D position={[3.0, -2.5, 0.08]} size={[0.1, 0.125, 0.08]} text='Web3 and Tech' />
+          <HomeText3D position={[-5.15, -0.15, -0.6]} size={[0.1, 0.125, 0.08]} text='©' font={FontProps.HOME_TITLE} materialConfigProp={'title'} />
+          <HomeText3D position={[0.65, -0.15, -0.6]} size={[0.28, 0.3, 0.16]} text='Hashmimic' font={FontProps.HOME_TITLE} materialConfigProp={'title'} />
+          <HomeText3D position={[0.75, 2.0, 0.08]} size={[0.1, 0.125, 0.08]} text='Who?' font={FontProps.DANCING} materialConfigProp={'subTitle'} />
+          <HomeText3D position={[-2.15, -1.75, 0.08]} size={[0.1, 0.125, 0.08]} text='Music' font={FontProps.DANCING} materialConfigProp={'subTitle'} />
+          <HomeText3D position={[3.0, -2.5, 0.08]} size={[0.1, 0.125, 0.08]} text='Web3 and Tech' font={FontProps.DANCING} materialConfigProp={'subTitle'} />
         </Suspense>
         <directionalLight position={[0, 5, 2.5]} intensity={2} />
         <directionalLight

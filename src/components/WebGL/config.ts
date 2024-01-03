@@ -1,4 +1,11 @@
-export const HOME_TRANSMISSION_MATERIAL_CONFIG = {
+export enum FontProps {
+  HOME_TITLE = '/home_center.json',
+  DANCING = '/DancingScript_Regular.json',
+  RUBIK_LINES = '/RubikLines_Regular.json',
+  RUBIK_GLITCH = '/RubikGlitch_Regular.json'
+}
+
+export const HOME_TRANSMISSION_MATERIAL_CONFIG: Record<string, any> = {
   title: {
     backside: true,
     samples: 16,

@@ -1,18 +1,19 @@
 import { Center, Text3D, MeshTransmissionMaterial } from "@react-three/drei";
 import { Vector3Tuple } from "three";
-import { HOME_TRANSMISSION_MATERIAL_CONFIG } from "./config";
+import { HOME_TRANSMISSION_MATERIAL_CONFIG, FontProps } from "./config";
 import { useLoader } from "@react-three/fiber";
 import { RGBELoader } from "three-stdlib";
 
-interface TextProps {
+interface Text3DProps {
   position: Vector3Tuple;
   text: string;
   size: Vector3Tuple;
+  font: FontProps;
+  materialConfigProp: string;
 }
 
-export const HomeSubTitle3D: React.FC<TextProps> = (props) => {
-  const { text, size } = props;
-  const font = '/DancingScript_Regular.json';
+export const HomeText3D: React.FC<Text3DProps> = (props) => {
+  const { text, size, font, materialConfigProp } = props;
   const texture = useLoader(RGBELoader, process.env.NEXT_PUBLIC_HOME_FONT_TEXTURE ?? '');
 
   return (
@@ -31,7 +32,7 @@ export const HomeSubTitle3D: React.FC<TextProps> = (props) => {
             curveSegments={128}
             bevelThickness={0.01}>
             {text}
-            <MeshTransmissionMaterial {...HOME_TRANSMISSION_MATERIAL_CONFIG['subTitle']} background={texture} />
+            <MeshTransmissionMaterial {...HOME_TRANSMISSION_MATERIAL_CONFIG[materialConfigProp]} background={texture} />
           </Text3D>
         </Center>
       </group>
