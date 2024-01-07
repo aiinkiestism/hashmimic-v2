@@ -1,3 +1,4 @@
+export * from './AppBg'
 export * from './AppCanvas'
 export * from './Clouds'
 export * from './HomeText3D'

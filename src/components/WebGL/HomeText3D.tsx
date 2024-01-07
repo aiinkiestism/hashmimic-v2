@@ -10,6 +10,7 @@ interface Text3DProps {
   size: Vector3Tuple;
   font: FontProps;
   materialConfigProp: string;
+  onClick?: () => void;
 }
 
 export const HomeText3D: React.FC<Text3DProps> = (props) => {
