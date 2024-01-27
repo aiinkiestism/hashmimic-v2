@@ -161,8 +161,8 @@ export const Cursor = (
   }, [width])
 
   useFrame(({ mouse, clock }: { mouse: THREE.Vector2; clock: THREE.Clock; }) => {
-    const x = (mouse.x * viewport.width) * 1.5 / 2;
-    const y = (mouse.y * viewport.height) * 1.5 / 2;
+    const x = (mouse.x * viewport.width) / 2;
+    const y = (mouse.y * viewport.height) / 2;
     const z = 0.1;
     const material = cursorRef.current?.material as THREE.ShaderMaterial;
 
