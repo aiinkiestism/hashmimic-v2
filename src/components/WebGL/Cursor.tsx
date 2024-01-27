@@ -2,7 +2,6 @@ import { useThree, useFrame } from "@react-three/fiber";
 import { useRef, useMemo, RefObject, useState, useEffect } from "react";
 import * as THREE from 'three'
 import { MathUtils } from "three";
-import { useWindowSize } from "react-use"
 
 const vertexShader = `
 uniform vec2 u_resolution;
@@ -127,15 +126,13 @@ void main() {
 `;
 
 export const Cursor = (
-  // { hover }:
-  // { hover: boolean; }
+  { hovered }:
+  { hovered: boolean; }
 ) => {
   const BASE_INTENSITY = 0.2;
   const cursorRef: RefObject<THREE.Mesh> = useRef<THREE.Mesh>(null);
-  const hover: RefObject<Boolean> = useRef<boolean>(false);
   const [size, setSize] = useState<number>(0.4)
   const { viewport } = useThree();
-  const { width } = useWindowSize();
 
   const uniforms = useMemo(() => {
     const u_resolution = { value: new THREE.Vector2() };
@@ -157,8 +154,9 @@ export const Cursor = (
   }, [viewport]);
 
   useEffect(() => {
-    if (width < 600) setSize(0.2)
-  }, [width])
+    hovered ? setSize(0.6) : setSize(0.4);
+    console.log
+  }, [hovered])
 
   useFrame(({ mouse, clock }: { mouse: THREE.Vector2; clock: THREE.Clock; }) => {
     const x = (mouse.x * viewport.width) / 2;
@@ -175,7 +173,7 @@ export const Cursor = (
       material.uniforms.u_time.value = 0.4 * clock.getElapsedTime();
       material.uniforms.u_intensity.value = MathUtils.lerp(
         material.uniforms.u_intensity.value,
-        hover.current ? 0.6 : BASE_INTENSITY,
+        hovered ? 0.4 : BASE_INTENSITY,
         0.02
       );
     }
