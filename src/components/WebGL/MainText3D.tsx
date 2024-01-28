@@ -2,10 +2,12 @@
 
 import { Center, Text3D, MeshTransmissionMaterial } from "@react-three/drei";
 import { Vector3Tuple } from "three";
+import * as THREE from 'three'
 import { HOME_TRANSMISSION_MATERIAL_CONFIG, FontProps } from "./config";
 import { useLoader } from "@react-three/fiber";
 import { RGBELoader } from "three-stdlib";
 import { useRouter } from 'next/navigation'
+import React from "react";
 
 interface Text3DProps {
   position: Vector3Tuple;
@@ -22,32 +24,29 @@ export const MainText3D: React.FC<Text3DProps> = (props) => {
   const router = useRouter();
 
   const handleClick = () => {
-    if (path) {
-      router.push(path);
-    }
+    if (path) router.push(path);
   };
 
   return (
-    <>
-      <group>
-        <Center scale={size} front top {...props} onClick={handleClick}>
-          <Text3D
-            castShadow
-            bevelEnabled
-            font={font}
-            scale={5}
-            letterSpacing={-0.03}
-            height={0.25}
-            bevelSize={0.01}
-            bevelSegments={10}
-            curveSegments={128}
-            bevelThickness={0.01}>
-            {text}
-            <MeshTransmissionMaterial {...HOME_TRANSMISSION_MATERIAL_CONFIG[materialConfigProp]} background={texture} />
-          </Text3D>
-        </Center>
-      </group>
-    </>
+    <group>
+      <Center scale={size} front top {...props} onClick={handleClick}>
+        <Text3D
+          castShadow
+          bevelEnabled
+          font={font}
+          scale={5}
+          letterSpacing={-0.03}
+          height={0.25}
+          bevelSize={0.01}
+          bevelSegments={10}
+          curveSegments={128}
+          bevelThickness={0.01}
+        >
+          {text}
+          <MeshTransmissionMaterial {...HOME_TRANSMISSION_MATERIAL_CONFIG[materialConfigProp]} background={texture} />
+        </Text3D>
+      </Center>
+    </group>
   );
 };
 
@@ -74,4 +73,23 @@ export const MainText3Ds = {
     Description: () => ( <MainText3D position={[0, 1.0, 0.08]} size={[0.075, 0.1, 0.06]} text="Hashmimic Projects Below." font={FontProps.DANCING} materialConfigProp={'subTitle'} /> ),
   }
 }
+
+const _MainText3DComponents = Object.values(MainText3Ds).flatMap((category) => {
+  return Object.values(category).map((component) => {
+    if (typeof component === 'function') {
+      const obj = new THREE.Object3D();
+      obj.add(React.createElement(component) as unknown as THREE.Object3D);
+      return obj;
+    } else if (Array.isArray(component)) {
+      return component.map((subComponent) => {
+        const obj = new THREE.Object3D();
+        obj.add(React.createElement(subComponent) as unknown as THREE.Object3D);
+        return obj;
+      });
+    }
+    return null;
+  });
+});
+
+export const MainText3DComponents = _MainText3DComponents.flat() as unknown as THREE.Object3D[];
 

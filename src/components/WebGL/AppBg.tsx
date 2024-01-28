@@ -1,10 +1,7 @@
-import { AppCanvas, Clouds, Cursor, MainText3Ds } from '@/components'
+import { AppCanvas, Clouds, Cursor } from '@/components'
 import { Environment, Lightformer } from "@react-three/drei";
 import React from 'react';
 import { ReactNode, Suspense } from "react";
-import { useHover } from 'react-use';
-
-type Element = ((state: boolean) => React.ReactElement<any>) | React.ReactElement<any>;
 
 interface Props {
   children: ReactNode
@@ -12,20 +9,12 @@ interface Props {
 
 export const AppBg: React.FC<Props> = (props) => {
   const { children } = props;
-  // eslint-disable-next-line react/jsx-key
-  const hoverableElements: Element[] = [...Object.values(MainText3Ds.home), MainText3Ds.who.Title, ...MainText3Ds.who.Descriptions, ...Object.values(MainText3Ds.music), ...Object.values(MainText3Ds.web3NTech)];
-
-  const hovered = hoverableElements.some(el => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [_, _hovered] = useHover(el);
-  return _hovered;
-  });
 
   return (
     <>
       <AppCanvas>
         <Suspense fallback={null}>
-          <Cursor hovered={hovered} />
+          <Cursor />
           <Clouds />
           {children}
         </Suspense>
