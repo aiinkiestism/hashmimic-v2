@@ -10,7 +10,7 @@ export function Clouds() {
         // @ts-ignore
         width={18}
         depth={2.6}
-        segments={24}
+        segments={12}
         color={'#C92636'}
       />
       <Cloud
@@ -20,7 +20,7 @@ export function Clouds() {
         // @ts-ignore
         width={24}
         depth={2.6}
-        segments={18}
+        segments={9}
         color={'#C92636'}
       />
       <Cloud
@@ -30,7 +30,7 @@ export function Clouds() {
         // @ts-ignore
         width={24}
         depth={2.6}
-        segments={24}
+        segments={12}
         color={'#F21AB0'}
       />
       <Cloud
@@ -40,7 +40,7 @@ export function Clouds() {
         // @ts-ignore
         width={18}
         depth={2.6}
-        segments={20}
+        segments={10}
         color={'#9E46C0'}
       />
       <Cloud
@@ -50,7 +50,7 @@ export function Clouds() {
         // @ts-ignore
         width={15}
         depth={2.6}
-        segments={26}
+        segments={13}
         color={'#C92636'}
       />
       <Cloud
@@ -60,7 +60,7 @@ export function Clouds() {
         // @ts-ignore
         width={20}
         depth={2.6}
-        segments={18}
+        segments={9}
         color={'#F21AB0'}
       />
       <Cloud
@@ -70,7 +70,7 @@ export function Clouds() {
         // @ts-ignore
         width={14}
         depth={2.6}
-        segments={21}
+        segments={10}
         color={'#9E46C0'}
       />
       <Cloud
@@ -80,7 +80,7 @@ export function Clouds() {
         // @ts-ignore
         width={12}
         depth={2.6}
-        segments={20}
+        segments={10}
         color={'#F21AB0'}
       />
     </>
