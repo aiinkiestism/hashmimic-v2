@@ -4,8 +4,8 @@ import { MainText3Ds } from "@/components";
 import { useTexture } from "@react-three/drei";
 import { Fragment } from "react";
 import TwitterIcon from "/public/twitter.svg"
-import LinkedInIcon from "/public/linkedin.svg"
-import GithubIcon from "/public/github.png"
+import LinkedInIcon from "/public/linkedin.png"
+import GithubIcon from "/public/github-white.png"
 import SpotifyIcon from "/public/spotify-icon.png"
 import AppleMusicIcon from "/public/apple-music-icon.png"
 import YoutubeIcon from "/public/youtube-icon.png"
@@ -26,10 +26,12 @@ export default function Who() {
       <group position={[0, -1, 0]}>
         <mesh position={[-1.5, 0.5, 0]} onClick={() => onClick("https://twitter.com/hashmimic")}>
           <boxGeometry args={[0.7, 0.7, 0.1]} />
+          {/* @ts-ignore */}
           <meshBasicMaterial attach="material" map={useTexture(TwitterIcon.src)} />
         </mesh>
         <mesh position={[0, 0.5, 0]} onClick={() => onClick("https://www.linkedin.com/in/keishi-s-665542190/")}>
           <boxGeometry args={[0.7, 0.7, 0.1]} />
+          {/* @ts-ignore */}
           <meshBasicMaterial attach="material" map={useTexture(LinkedInIcon.src)} />
         </mesh>
         <mesh position={[1.5, 0.5, 0]} onClick={() => onClick("https://github.com/aiinkiestism")}>
