@@ -6,10 +6,8 @@ import SpotifyIcon from "/public/spotify-icon.png"
 import AppleMusicIcon from "/public/apple-music-icon.png"
 import AmazonMusicIcon from "/public/amazon-music-icon.png"
 import YoutubeIcon from "/public/youtube-icon.png"
-import { useRef } from "react";
 
 export default function Music() {
-  const iframeRef = useRef();
   const onClick = (url: string) => {
     window.open(url, "_blank");
   };
