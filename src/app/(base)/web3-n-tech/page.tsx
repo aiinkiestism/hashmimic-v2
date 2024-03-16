@@ -10,7 +10,6 @@ export default function Web3NTech() {
   const { width } = useWindowSize();
 
   const geometrySize: Vector3Tuple = [width < 1025 ? 0.7 / 2 : 0.7, width < 1025 ? 0.7 / 2 : 0.7, 0.1];
-  const meshPosition = (x: number, y: number, z: number): Vector3Tuple => [width < 1025 ? x / 2 : x, width < 1025 ? y / 1.6 + 0.2 : y, z];
 
   const onClick = (url: string) => {
     window.open(url, "_blank");
