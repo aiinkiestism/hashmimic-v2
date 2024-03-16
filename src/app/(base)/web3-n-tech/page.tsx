@@ -18,7 +18,7 @@ export default function Web3NTech() {
   return (
     <>
       <MainText3Ds.web3NTech.Title />
-      <mesh position={[0, 0.68, 0]} onClick={() => onClick("https://web3.bio/hashmimic.eth")}>
+      <mesh position={[0, width < 1025 ? 0.68 : 1.3, 0]} onClick={() => onClick("https://web3.bio/hashmimic.eth")}>
         <boxGeometry args={geometrySize} />
         <meshBasicMaterial attach="material" map={useTexture(Web3BioIcon.src)} />
       </mesh>

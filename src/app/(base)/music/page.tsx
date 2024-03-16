@@ -41,7 +41,7 @@ export default function Music() {
           <meshBasicMaterial attach="material" map={useTexture(YoutubeIcon.src)} />
         </mesh>
       </group>
-      <Html position={[0, -1.0, 0]} center>
+      <Html position={[0, width < 1025 ? -1.0 : -1.6, 0]} center>
         <p style={{ color: 'transparent' }}>aldf;alkjdsf;alkjsdf;ljsdf;lajk;ldjkf;ldskjf;ala;ldkfja;ldjsfkalkajsf;dlakjd;flkaj;sld</p>
         <iframe style={{ borderRadius: "12px", textAlign: 'center', margin: '0 auto' }} src="https://open.spotify.com/embed/artist/7M2UIn786SiNFD3VK7nxFn?utm_source=generator" width={width < 1025 ? "60%" : "100%"} height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
       </Html>
