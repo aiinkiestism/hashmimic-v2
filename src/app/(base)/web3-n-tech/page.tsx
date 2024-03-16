@@ -1,10 +1,17 @@
 'use client'
 
 import { useTexture } from "@react-three/drei";
+import { useWindowSize } from "react-use";
 import { MainText3Ds } from "@/components";
 import Web3BioIcon from "/public/web3-bio.png"
+import { Vector3Tuple } from "three";
 
 export default function Web3NTech() {
+  const { width } = useWindowSize();
+
+  const geometrySize: Vector3Tuple = [width < 1025 ? 0.7 / 2 : 0.7, width < 1025 ? 0.7 / 2 : 0.7, 0.1];
+  const meshPosition = (x: number, y: number, z: number): Vector3Tuple => [width < 1025 ? x / 2 : x, width < 1025 ? y / 1.6 + 0.2 : y, z];
+
   const onClick = (url: string) => {
     window.open(url, "_blank");
   };
@@ -12,8 +19,8 @@ export default function Web3NTech() {
   return (
     <>
       <MainText3Ds.web3NTech.Title />
-      <mesh position={[0, 1.3, 0]} onClick={() => onClick("https://web3.bio/hashmimic.eth")}>
-        <boxGeometry args={[0.7, 0.7, 0.1]} />
+      <mesh position={[0, 0.68, 0]} onClick={() => onClick("https://web3.bio/hashmimic.eth")}>
+        <boxGeometry args={geometrySize} />
         <meshBasicMaterial attach="material" map={useTexture(Web3BioIcon.src)} />
       </mesh>
       <MainText3Ds.web3NTech.Description />

@@ -2,6 +2,7 @@ import { AppCanvas, Clouds, Cursor } from '@/components'
 import { Environment, Lightformer } from "@react-three/drei";
 import React from 'react';
 import { ReactNode, Suspense } from "react";
+import { useWindowSize } from 'react-use';
 
 interface Props {
   children: ReactNode
@@ -9,12 +10,13 @@ interface Props {
 
 export const AppBg: React.FC<Props> = (props) => {
   const { children } = props;
+  const { width } = useWindowSize();
 
   return (
     <>
       <AppCanvas>
         <Suspense fallback={null}>
-          <Cursor />
+          {width < 1025 ? null : <Cursor />}
           <Clouds />
           {children}
         </Suspense>
