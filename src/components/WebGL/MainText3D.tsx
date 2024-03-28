@@ -9,6 +9,7 @@ import { RGBELoader } from "three-stdlib";
 import { useRouter } from 'next/navigation'
 import React from "react";
 import { useWindowSize } from "react-use";
+import type { Route } from 'next'
 
 interface Text3DProps {
   rawPosition: Vector3Tuple;
@@ -16,10 +17,10 @@ interface Text3DProps {
   size: Vector3Tuple;
   font: FontProps;
   materialConfigProp: string;
-  path?: any;  // TODO: provide type
+  path?: Route<string> | null;
 }
 
-export const MainText3D: React.FC<Text3DProps> = (props) => {
+const MainText3D: React.FC<Text3DProps> = React.memo((props) => {
   const { text, size, rawPosition, font, materialConfigProp, path } = props;
   const texture = useLoader(RGBELoader, process.env.NEXT_PUBLIC_HOME_FONT_TEXTURE ?? '');
   const router = useRouter();
@@ -53,7 +54,8 @@ export const MainText3D: React.FC<Text3DProps> = (props) => {
       </Center>
     </group>
   );
-};
+});
+MainText3D.displayName = 'MainText3D';
 
 export const MainText3Ds = {
   home: {
