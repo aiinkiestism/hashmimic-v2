@@ -7,7 +7,7 @@ import { HOME_TRANSMISSION_MATERIAL_CONFIG, FontProps } from "./config";
 import { useLoader } from "@react-three/fiber";
 import { RGBELoader } from "three-stdlib";
 import { useRouter } from 'next/navigation'
-import React from "react";
+import React, { useCallback, useMemo } from "react";
 import { useWindowSize } from "react-use";
 import type { Route } from 'next'
 
@@ -26,12 +26,17 @@ const MainText3D: React.FC<Text3DProps> = React.memo((props) => {
   const router = useRouter();
   const { width } = useWindowSize();
 
-  const responsiveSize: Vector3Tuple = [width < 1025 ? size[0] / 3 : size[0], width < 1025 ? size[1] / 3 : size[1], size[2]];
-  const responsivePosition: Vector3Tuple = [width < 1025 ? rawPosition[0] / 3 : rawPosition[0], width < 1025 ? rawPosition[1] / 1.8 : rawPosition[1], rawPosition[2]];
+  const responsiveSize: Vector3Tuple = useMemo(() => (
+    [width < 1025 ? size[0] / 3 : size[0], width < 1025 ? size[1] / 3 : size[1], size[2]]
+  ), [width, size]);
 
-  const handleClick = () => {
+  const responsivePosition: Vector3Tuple = useMemo(() => (
+    [width < 1025 ? rawPosition[0] / 3 : rawPosition[0], width < 1025 ? rawPosition[1] / 1.8 : rawPosition[1], rawPosition[2]]
+  ), [width, rawPosition]);
+
+  const handleClick = useCallback(() => {
     if (path) router.push(path);
-  };
+  }, [path, router]);
 
   return (
     <group>
@@ -44,8 +49,8 @@ const MainText3D: React.FC<Text3DProps> = React.memo((props) => {
           letterSpacing={-0.03}
           height={0.25}
           bevelSize={0.01}
-          bevelSegments={10}
-          curveSegments={128}
+          bevelSegments={2.5}
+          curveSegments={32}
           bevelThickness={0.01}
         >
           {text}

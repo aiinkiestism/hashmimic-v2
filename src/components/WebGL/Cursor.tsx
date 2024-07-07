@@ -1,8 +1,7 @@
 import { useThree, useFrame } from "@react-three/fiber";
-import { useRef, useMemo, RefObject, useState, useEffect } from "react";
+import { useRef, useMemo, RefObject, useState } from "react";
 import * as THREE from 'three'
 import { MathUtils } from "three";
-import { MainText3DComponents, MainText3Ds } from '@/components';
 
 const vertexShader = `
 uniform vec2 u_resolution;
@@ -130,31 +129,14 @@ export const Cursor = () => {
   const BASE_INTENSITY = 0.2;
   const cursorRef: RefObject<THREE.Mesh> = useRef<THREE.Mesh>(null);
   const [size, setSize] = useState<number>(0.4)
-  const { viewport, camera, raycaster, mouse } = useThree();
-  // const [hoverableObjects, setHoverableObjects] = useState<THREE.Object3D[]>();
+  const { viewport, mouse } = useThree();
 
-  const uniforms = useMemo(() => {
-    const u_resolution = { value: new THREE.Vector2() };
-    const u_mouse = { value: new THREE.Vector2() };
-
-    u_resolution.value.x = viewport.width;
-    u_resolution.value.y = viewport.height;
-
-    return {
-      u_resolution,
-      u_mouse,
-      u_intensity: {
-        value: BASE_INTENSITY,
-      },
-      u_time: {
-        value: 0.0,
-      },
-    };
-  }, [viewport]);
-
-  // useEffect(() => {
-  //   setHoverableObjects([...MainText3DComponents]);
-  // }, []);
+  const uniforms = useMemo(() => ({
+    u_resolution: { value: new THREE.Vector2(viewport.width, viewport.height) },
+    u_mouse: { value: new THREE.Vector2() },
+    u_intensity: { value: BASE_INTENSITY },
+    u_time: { value: 0.0 },
+  }), [viewport]);
 
   useFrame(({ clock }: { clock: THREE.Clock }) => {
     const x = (mouse.x * viewport.width) / 2;
@@ -176,39 +158,6 @@ export const Cursor = () => {
       );
     }
   });
-
-  // useFrame(({ clock }: { clock: THREE.Clock }) => {
-  //   if (hoverableObjects) {
-  //     raycaster.setFromCamera(mouse, camera);
-  //     const intersections = raycaster.intersectObjects(hoverableObjects);
-  //     console.log("Intersections:", intersections);
-
-  //     const handleCursor = (_size: number, isHovered: boolean) => {
-  //       setSize(_size);
-  
-  //       const x = (mouse.x * viewport.width) / 2;
-  //       const y = (mouse.y * viewport.height) / 2;
-  //       const z = 0.1;
-  //       const material = cursorRef.current?.material as THREE.ShaderMaterial;
-  
-  //       uniforms.u_mouse.value.x = x;
-  //       uniforms.u_mouse.value.y = y;
-  
-  //       cursorRef.current?.position.set(x, y, z);
-  
-  //       if (material) {
-  //         material.uniforms.u_time.value = 0.4 * clock.getElapsedTime();
-  //         material.uniforms.u_intensity.value = MathUtils.lerp(
-  //           material.uniforms.u_intensity.value,
-  //           isHovered ? 0.8 : BASE_INTENSITY,
-  //           0.02
-  //         );
-  //       }
-  //     };
-  
-  //     intersections.length > 0 ? handleCursor(0.6, true) : handleCursor(0.4, false);
-  //   }
-  // });
 
   return (
     <mesh ref={cursorRef}>
