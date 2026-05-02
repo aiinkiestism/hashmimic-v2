@@ -1,3 +1,5 @@
+'use client'
+
 import { Cloud } from '@react-three/drei';
 import { Vector3 } from '@react-three/fiber';
 import { useMemo } from 'react';

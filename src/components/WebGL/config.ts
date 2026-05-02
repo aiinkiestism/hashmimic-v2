@@ -1,3 +1,6 @@
+import type { ComponentProps } from "react";
+import type { MeshTransmissionMaterial } from "@react-three/drei";
+
 export enum FontProps {
   HOME_TITLE = '/home_center.json',
   DANCING = '/DancingScript_Regular.json',
@@ -5,11 +8,15 @@ export enum FontProps {
   RUBIK_GLITCH = '/RubikGlitch_Regular.json'
 }
 
-export const HOME_TRANSMISSION_MATERIAL_CONFIG: Record<string, any> = {
+type TransmissionMaterialProps = ComponentProps<typeof MeshTransmissionMaterial>;
+
+export type MaterialConfigKey = "title" | "subTitle";
+
+export const HOME_TRANSMISSION_MATERIAL_CONFIG: Record<MaterialConfigKey, TransmissionMaterialProps> = {
   title: {
     backside: true,
-    samples: 16,
-    resolution: 1024,
+    samples: 6,
+    resolution: 512,
     clearcoat: 0,
     clearcoatRoughness: 0.0,
     thickness: 0.35,
@@ -22,17 +29,15 @@ export const HOME_TRANSMISSION_MATERIAL_CONFIG: Record<string, any> = {
     ior: 0.83,
     transmission: 0.6,
     color: '#ffc300',
-    gColor: '#87ceeb',
     envMapIntensity: 1,
     reflectivity: 0.05,
-    shadow: '#87ceeb',
     emissive: '#fff',
     emissiveIntensity: -0.075,
   },
   subTitle: {
     backside: true,
-    samples: 16,
-    resolution: 1024,
+    samples: 6,
+    resolution: 512,
     clearcoat: 0,
     clearcoatRoughness: 0.0,
     thickness: 0.35,
@@ -45,11 +50,9 @@ export const HOME_TRANSMISSION_MATERIAL_CONFIG: Record<string, any> = {
     ior: 0.83,
     transmission: 0.6,
     color: '#ff4500',
-    gColor: '#ff6f40',
     envMapIntensity: 1,
     reflectivity: 0.05,
-    shadow: '#87ceeb',
-    emissive: '#000',
-    emissiveIntensity: -0.075,
+    emissive: '#ff4500',
+    emissiveIntensity: 0.15,
   },
 };

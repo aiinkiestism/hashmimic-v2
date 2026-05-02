@@ -1,68 +1,51 @@
 'use client'
 
-import { MainText3Ds } from "@/components";
 import { useTexture } from "@react-three/drei";
-import { useWindowSize } from "react-use";
 import { Fragment } from "react";
-import TwitterIcon from "/public/twitter.svg"
-import LinkedInIcon from "/public/linkedin.png"
-import GithubIcon from "/public/github-white.png"
-import SpotifyIcon from "/public/spotify-icon.png"
-import AppleMusicIcon from "/public/apple-music-icon.png"
-import YoutubeIcon from "/public/youtube-icon.png"
-import Web3BioIcon from "/public/web3-bio.png"
 import { Vector3Tuple } from "three";
 
+import { AppBg, IconLink, MainText3Ds } from "@/components";
+import { useIsMobile } from "@/lib/responsive";
+
+const ICON = {
+  twitter: "/twitter.svg",
+  linkedin: "/linkedin.png",
+  github: "/github-white.png",
+  spotify: "/spotify-icon.png",
+  appleMusic: "/apple-music-icon.png",
+  youtube: "/youtube-icon.png",
+  web3Bio: "/web3-bio.png",
+} as const;
+
+Object.values(ICON).forEach((src) => useTexture.preload(src));
+
 export default function Who() {
-  const { width } = useWindowSize();
+  const { isMobile } = useIsMobile();
 
-  const geometrySize: Vector3Tuple = [width < 1025 ? 0.7 / 2 : 0.7, width < 1025 ? 0.7 / 2 : 0.7, 0.1];
-  const meshPosition = (x: number, y: number, z: number): Vector3Tuple => [width < 1025 ? x / 2 : x, width < 1025 ? y / 1.6 + 0.2 : y, z];
-
-  const onClick = (url: string) => {
-    window.open(url, "_blank");
-  };
+  const geometrySize: Vector3Tuple = [isMobile ? 0.7 / 2 : 0.7, isMobile ? 0.7 / 2 : 0.7, 0.1];
+  const meshPosition = (x: number, y: number, z: number): Vector3Tuple => [
+    isMobile ? x / 2 : x,
+    isMobile ? y / 1.6 + 0.2 : y,
+    z,
+  ];
 
   return (
-    <>
+    <AppBg>
       <MainText3Ds.who.Title />
-      {MainText3Ds.who.Descriptions.map((description, i) => (
+      {MainText3Ds.who.Descriptions.map((Description, i) => (
         <Fragment key={i}>
-          {description()}
+          <Description />
         </Fragment>
       ))}
       <group position={[0, -1, 0]}>
-        <mesh position={meshPosition(-1.5, 0.5, 0)} onClick={() => onClick("https://twitter.com/hashmimic")}>
-          <boxGeometry args={geometrySize} />
-          {/* @ts-ignore */}
-          <meshBasicMaterial attach="material" map={useTexture(TwitterIcon.src)} />
-        </mesh>
-        <mesh position={meshPosition(-0.5, 0.5, 0)} onClick={() => onClick("https://www.linkedin.com/in/keishi-s-665542190/")}>
-          <boxGeometry args={geometrySize} />
-          {/* @ts-ignore */}
-          <meshBasicMaterial attach="material" map={useTexture(LinkedInIcon.src)} />
-        </mesh>
-        <mesh position={meshPosition(0.5, 0.5, 0)} onClick={() => onClick("https://github.com/aiinkiestism")}>
-          <boxGeometry args={geometrySize} />
-          <meshBasicMaterial attach="material" map={useTexture(GithubIcon.src)} />
-        </mesh>
-        <mesh position={meshPosition(1.5, 0.5, 0)} onClick={() => onClick("https://web3.bio/hashmimic.eth")}>
-          <boxGeometry args={geometrySize} />
-          <meshBasicMaterial attach="material" map={useTexture(Web3BioIcon.src)} />
-        </mesh>
-        <mesh position={meshPosition(-1.5, -0.5, 0)} onClick={() => onClick("https://open.spotify.com/artist/7M2UIn786SiNFD3VK7nxFn")}>
-          <boxGeometry args={geometrySize} />
-          <meshBasicMaterial attach="material" map={useTexture(SpotifyIcon.src)} />
-        </mesh>
-        <mesh position={meshPosition(0, -0.5, 0)} onClick={() => onClick("https://music.apple.com/jp/artist/hashmimic/1699465976")}>
-          <boxGeometry args={geometrySize} />
-          <meshBasicMaterial attach="material" map={useTexture(AppleMusicIcon.src)} />
-        </mesh>
-        <mesh position={meshPosition(1.5, -0.5, 0)} onClick={() => onClick("https://www.youtube.com/@hashmimic")}>
-          <boxGeometry args={geometrySize} />
-          <meshBasicMaterial attach="material" map={useTexture(YoutubeIcon.src)} />
-        </mesh>
+        <IconLink src={ICON.twitter} position={meshPosition(-1.5, 0.5, 0)} size={geometrySize} url="https://twitter.com/hashmimic" />
+        <IconLink src={ICON.linkedin} position={meshPosition(-0.5, 0.5, 0)} size={geometrySize} url="https://www.linkedin.com/in/keishi-s-665542190/" />
+        <IconLink src={ICON.github} position={meshPosition(0.5, 0.5, 0)} size={geometrySize} url="https://github.com/aiinkiestism" />
+        <IconLink src={ICON.web3Bio} position={meshPosition(1.5, 0.5, 0)} size={geometrySize} url="https://web3.bio/hashmimic.eth" />
+        <IconLink src={ICON.spotify} position={meshPosition(-1.5, -0.5, 0)} size={geometrySize} url="https://open.spotify.com/artist/7M2UIn786SiNFD3VK7nxFn" />
+        <IconLink src={ICON.appleMusic} position={meshPosition(0, -0.5, 0)} size={geometrySize} url="https://music.apple.com/jp/artist/hashmimic/1699465976" />
+        <IconLink src={ICON.youtube} position={meshPosition(1.5, -0.5, 0)} size={geometrySize} url="https://www.youtube.com/@hashmimic" />
       </group>
-    </>
-  )
+    </AppBg>
+  );
 }
