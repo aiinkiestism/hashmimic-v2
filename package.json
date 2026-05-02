@@ -16,7 +16,7 @@
     "*.{js,ts,jsx,tsx}": "pnpm fmt"
   },
   "dependencies": {
-    "@heroui/react": "^2.8.5",
+    "@heroui/react": "^3.0.3",
     "@heroui/theme": "^2.4.20",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
