@@ -4,7 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
-      day: "1"
       time: "09:00"
       timezone: "Asia/Tokyo"
     open-pull-requests-limit: 10
@@ -49,7 +48,6 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
-      day: "1"
       time: "09:00"
       timezone: "Asia/Tokyo"
     labels:
