@@ -21,7 +21,7 @@
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
     "@uidotdev/usehooks": "^2.3.1",
-    "abitype": "^0.9.10",
+    "abitype": "^1.2.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "ethers": "^6.7.1",
