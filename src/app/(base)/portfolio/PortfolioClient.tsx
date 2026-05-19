@@ -20,7 +20,7 @@ const DEFAULT_GLYPH = "#";
   (src) => useTexture.preload(src),
 );
 
-interface Web3NTechClientProps {
+interface PortfolioClientProps {
   projects: PortfolioProject[];
 }
 
@@ -32,7 +32,7 @@ const ICON_X_STEP = 1.0;
 const ICON_ROW_STEP = 1.0;
 const MAX_PER_ROW = 5;
 
-export function Web3NTechClient({ projects }: Web3NTechClientProps) {
+export function PortfolioClient({ projects }: PortfolioClientProps) {
   const { isMobile } = useIsMobile();
 
   const geometrySize: Vector3Tuple = [
@@ -67,8 +67,8 @@ export function Web3NTechClient({ projects }: Web3NTechClientProps) {
 
   return (
     <AppBg>
-      <MainText3Ds.web3NTech.Title />
-      <MainText3Ds.web3NTech.Description />
+      <MainText3Ds.portfolio.Title />
+      <MainText3Ds.portfolio.Description />
 
       {items.map((item, i) => {
         const row = Math.floor(i / MAX_PER_ROW);

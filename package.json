@@ -23,6 +23,7 @@
     "@heroui/theme": "^2.4.20",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
+    "@react-three/postprocessing": "^3.0.4",
     "@uidotdev/usehooks": "^2.3.1",
     "abitype": "^0.9.10",
     "class-variance-authority": "^0.7.0",
@@ -32,6 +33,7 @@
     "lucide-react": "^0.284.0",
     "meshline": "^3.1.6",
     "next": "^16.2.4",
+    "postprocessing": "^6.39.1",
     "react": "^19.2.0",
     "react-animated-cursor": "^2.11.2",
     "react-dom": "^19.2.0",
@@ -45,11 +47,12 @@
     "wagmi": "^1.4.3"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.2.4",
     "@types/node": "^22",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@types/three": "^0.184.0",
-    "@eslint/eslintrc": "^3.3.1",
     "@types/validator": "^13.11.1",
     "autoprefixer": "^10",
     "eslint": "^9",
@@ -60,7 +63,6 @@
     "postcss": "^8",
     "prettier": "^3.8.0",
     "tailwindcss": "^4.2.4",
-    "@tailwindcss/postcss": "^4.2.4",
     "typescript": "^5",
     "zod": "^3.22.4"
   }

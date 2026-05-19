@@ -31,8 +31,8 @@ export const HOME_TRANSMISSION_MATERIAL_CONFIG: Record<MaterialConfigKey, Transm
     color: '#ffc300',
     envMapIntensity: 1,
     reflectivity: 0.05,
-    emissive: '#fff',
-    emissiveIntensity: -0.075,
+    emissive: '#ffc300',
+    emissiveIntensity: 0.2,
   },
   subTitle: {
     backside: true,
@@ -53,6 +53,6 @@ export const HOME_TRANSMISSION_MATERIAL_CONFIG: Record<MaterialConfigKey, Transm
     envMapIntensity: 1,
     reflectivity: 0.05,
     emissive: '#ff4500',
-    emissiveIntensity: 0.15,
+    emissiveIntensity: 0.55,
   },
 };

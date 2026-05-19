@@ -3,7 +3,7 @@
 import { useEffect, useMemo } from "react";
 import * as THREE from "three";
 import { Vector3Tuple } from "three";
-import { openExternal } from "@/lib/external";
+import { CloudShell } from "./CloudShell";
 
 interface GlyphIconProps {
   glyph: string;
@@ -11,6 +11,11 @@ interface GlyphIconProps {
   size: Vector3Tuple;
   url: string;
 }
+
+// Matches IconLink's INNER_FRACTION so glyph and icon tiles render at
+// the same visual size as the central sigil. Large + camera-facing means
+// the glyph is unambiguously readable; halo rings frame around it.
+const INNER_FRACTION = 0.75;
 
 // Renders a single glyph (e.g. `#`) with the page's loaded Dancing Script
 // web font into a canvas, then uses that canvas as a Three.js texture.
@@ -27,19 +32,11 @@ const FONT_SPEC = "700 380px 'Dancing Script', cursive";
 
 function drawGlyph(ctx: CanvasRenderingContext2D, glyph: string) {
   ctx.clearRect(0, 0, TEX_SIZE, TEX_SIZE);
+  // No background fill — the CloudShell already provides the dark
+  // iridescent core orb behind the glyph. Keeping alpha=0 elsewhere lets
+  // the inner orb show through the icon plane's alphaTest discards.
 
-  // Deep navy card background (matches the other dark-bg icons).
-  ctx.fillStyle = "#0a0a14";
-  ctx.fillRect(0, 0, TEX_SIZE, TEX_SIZE);
-
-  // Soft halo so the icon glows against the watercolor page bg.
   const cx = TEX_SIZE / 2;
-  const halo = ctx.createRadialGradient(cx, cx, 0, cx, cx, TEX_SIZE * 0.6);
-  halo.addColorStop(0, "rgba(255, 195, 0, 0.24)");
-  halo.addColorStop(0.55, "rgba(242, 26, 176, 0.10)");
-  halo.addColorStop(1, "rgba(10, 10, 20, 0)");
-  ctx.fillStyle = halo;
-  ctx.fillRect(0, 0, TEX_SIZE, TEX_SIZE);
 
   // Brand-palette diagonal gradient on the glyph fill.
   const grad = ctx.createLinearGradient(0, 0, TEX_SIZE, TEX_SIZE);
@@ -100,10 +97,17 @@ export function GlyphIcon({ glyph, position, size, url }: GlyphIconProps) {
 
   if (!texture) return null;
 
+  const innerSize = size[0] * INNER_FRACTION;
+
   return (
-    <mesh position={position} onClick={() => openExternal(url)}>
-      <boxGeometry args={size} />
-      <meshBasicMaterial map={texture} />
-    </mesh>
+    <CloudShell position={position} size={size} url={url}>
+      {/* alphaTest discards everything outside the glyph silhouette so the
+          backdrop additive halo shows through cleanly, while keeping the
+          glyph itself in the opaque pass for crisp legibility. */}
+      <mesh>
+        <planeGeometry args={[innerSize, innerSize]} />
+        <meshBasicMaterial map={texture} alphaTest={0.1} toneMapped={false} />
+      </mesh>
+    </CloudShell>
   );
 }

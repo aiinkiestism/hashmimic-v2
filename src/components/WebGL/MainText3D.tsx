@@ -92,7 +92,7 @@ export const MainText3Ds = {
     BrandName: () => ( <MainText3D rawPosition={[0.65, -0.15, -0.6]} size={[0.28, 0.3, 0.16]} text='Hashmimic' font={FontProps.HOME_TITLE} materialConfigProp={'title'} /> ),
     WhoLink: () => ( <MainText3D rawPosition={[0.75, 2.0, 0.08]} size={[0.1, 0.125, 0.08]} text='Who?' font={FontProps.DANCING} materialConfigProp={'subTitle'} path={'/who'} /> ),
     MusicLink: () => ( <MainText3D rawPosition={[-2.15, -1.75, 0.08]} size={[0.1, 0.125, 0.08]} text='Music' font={FontProps.DANCING} materialConfigProp={'subTitle'} path={'/music'} /> ),
-    Web3NTechLink: () => ( <MainText3D rawPosition={[3.0, -2.5, 0.08]} size={[0.1, 0.125, 0.08]} text='Web3 & Tech' font={FontProps.DANCING} materialConfigProp={'subTitle'} path={'/web3-n-tech'} /> ),
+    PortfolioLink: () => ( <MainText3D rawPosition={[3.0, -2.5, 0.08]} size={[0.1, 0.125, 0.08]} text='Portfolio' font={FontProps.DANCING} materialConfigProp={'subTitle'} path={'/portfolio'} /> ),
   },
   who: {
     Title: () => ( <MainText3D rawPosition={[0, 2.0, 0.08]} size={[0.1, 0.125, 0.08]} text='Who?' font={FontProps.DANCING} materialConfigProp={'subTitle'} /> ),
@@ -105,9 +105,14 @@ export const MainText3Ds = {
     Title: () => ( <MainText3D rawPosition={[0, 2.0, 0.08]} size={[0.1, 0.125, 0.08]} text='Music' font={FontProps.DANCING} materialConfigProp={'subTitle'} /> ),
     Description: () => ( <MainText3D rawPosition={[0, 1.0, 0.0]} size={[0.075, 0.1, 0.06]} text="Listen now." font={FontProps.DANCING} materialConfigProp={'subTitle'} />)
   },
-  web3NTech: {
-    Title: () => ( <MainText3D rawPosition={[0, 2.0, 0.08]} size={[0.1, 0.125, 0.08]} text='Web3 & Tech' font={FontProps.DANCING} materialConfigProp={'subTitle'} /> ),
+  portfolio: {
+    Title: () => ( <MainText3D rawPosition={[0, 2.0, 0.08]} size={[0.1, 0.125, 0.08]} text='Portfolio' font={FontProps.DANCING} materialConfigProp={'subTitle'} /> ),
     Description: () => ( <MainText3D rawPosition={[0, 0.5, 0.08]} size={[0.075, 0.1, 0.06]} text="Hashmimic Projects Below." font={FontProps.DANCING} materialConfigProp={'subTitle'} /> ),
+  },
+  notFound: {
+    Title: () => ( <MainText3D rawPosition={[0, 1.4, 0.08]} size={[0.22, 0.26, 0.16]} text='404' font={FontProps.HOME_TITLE} materialConfigProp={'subTitle'} /> ),
+    Description: () => ( <MainText3D rawPosition={[0, -0.2, 0.08]} size={[0.075, 0.1, 0.06]} text="Page not found." font={FontProps.DANCING} materialConfigProp={'subTitle'} /> ),
+    HomeLink: () => ( <MainText3D rawPosition={[0, -1.3, 0.08]} size={[0.08, 0.1, 0.06]} text='Back to home' font={FontProps.DANCING} materialConfigProp={'subTitle'} path={'/'} /> ),
   }
 }
 

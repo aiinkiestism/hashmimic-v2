@@ -1,5 +1,5 @@
 import { fetchUnchainedXProjects } from "@/lib/unchainedx-portfolio";
-import { Web3NTechClient } from "./Web3NTechClient";
+import { PortfolioClient } from "./PortfolioClient";
 
 // Re-render at most once per hour so newly-published UnchainedX projects
 // surface here without a deploy. The fetch helper sets the same revalidate
@@ -7,7 +7,7 @@ import { Web3NTechClient } from "./Web3NTechClient";
 // layer too — this just bounds page-level staleness.
 export const revalidate = 3600;
 
-export default async function Web3NTech() {
+export default async function Portfolio() {
   const projects = await fetchUnchainedXProjects();
-  return <Web3NTechClient projects={projects} />;
+  return <PortfolioClient projects={projects} />;
 }

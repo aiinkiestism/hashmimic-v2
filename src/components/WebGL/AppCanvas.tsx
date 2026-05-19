@@ -1,6 +1,7 @@
 'use client'
 
 import { Canvas } from '@react-three/fiber'
+import { Bloom, EffectComposer } from '@react-three/postprocessing'
 
 // Main scene Canvas stays on the legacy WebGLRenderer because drei's
 // MeshTransmissionMaterial is implemented as a custom ShaderMaterial that
@@ -10,6 +11,11 @@ import { Canvas } from '@react-three/fiber'
 //
 // CursorOverlay and LoadingOrb still default to WebGPU (with WebGL2
 // fallback) because they use TSL node materials, not legacy ShaderMaterial.
+//
+// Bloom postprocessing is what makes emissive surfaces (the cloud tiles,
+// title text emissive trim) actually read as glowing. Without it, even
+// max-intensity emissive caps at screen white and looks "merely bright"
+// rather than "neon glow with halo".
 export function AppCanvas({
   children,
 }: {
@@ -33,6 +39,14 @@ export function AppCanvas({
     >
       <ambientLight intensity={0.4} />
       {children}
+      <EffectComposer>
+        <Bloom
+          intensity={0.65}
+          luminanceThreshold={0.4}
+          luminanceSmoothing={0.15}
+          mipmapBlur
+        />
+      </EffectComposer>
     </Canvas>
   )
 }

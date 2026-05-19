@@ -36,17 +36,25 @@ export default function Music() {
         <IconLink src={ICON.amazonMusic} position={meshPosition(0.5, 0, 0)} size={geometrySize} url="https://music.amazon.com/artists/B0CCX8VWC7/hashmimic" />
         <IconLink src={ICON.youtube} position={meshPosition(1.5, 0, 0)} size={geometrySize} url="https://www.youtube.com/@hashmimic" />
       </group>
-      <Html position={[0, isMobile ? -1.0 : -1.6, 0]} center>
+      <Html position={[0, isMobile ? -1.2 : -1.6, 0]} center>
+        {/* Spotify's standard embed (152px) breaks below ~280px viewport — its
+            internal action row overflows and clips. On mobile we switch to the
+            compact variant (height 80), which is what the player auto-renders
+            at that height, and keep the container fluid via min(viewport, max)
+            so it never has to be narrower than the player needs. */}
         <div
-          style={{ width: isMobile ? "240px" : "640px", cursor: "auto" }}
+          style={{
+            width: isMobile ? "min(86vw, 320px)" : "min(92vw, 640px)",
+            cursor: "auto",
+          }}
           onPointerEnter={() => dispatchCursorHidden(true)}
           onPointerLeave={() => dispatchCursorHidden(false)}
         >
           <iframe
             style={{ borderRadius: "12px", display: "block", margin: "0 auto" }}
             src="https://open.spotify.com/embed/artist/7M2UIn786SiNFD3VK7nxFn?utm_source=generator"
-            width={isMobile ? "60%" : "100%"}
-            height="152"
+            width="100%"
+            height={isMobile ? 80 : 152}
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
             title="Spotify embed: hashmimic"

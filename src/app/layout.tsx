@@ -1,4 +1,5 @@
 import { AppHeroUIProvider } from "@/providers";
+import { NavigationLayer } from "@/components";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Dancing_Script } from "next/font/google";
@@ -71,7 +72,16 @@ export default function RootLayout({
         className={`${inter.variable} ${dancingScript.variable} ${inter.className}`}
         suppressHydrationWarning
       >
-        <AppHeroUIProvider>{children}</AppHeroUIProvider>
+        <AppHeroUIProvider>
+          {/* NavigationLayer lives at the root so it spans every route —
+              including /not-found — without being torn down on cross-route
+              transitions. Putting it inside (base)/layout.tsx caused the
+              cursor canvas + loading shader to unmount/remount when going
+              from /not-found → /, racing the WebGPU init against the old
+              renderer's teardown and surfacing as
+              "Cannot read properties of null (reading 'addEventListener')". */}
+          <NavigationLayer>{children}</NavigationLayer>
+        </AppHeroUIProvider>
         {/* <AnimatedCursor
           innerSize={20}
           outerSize={30}

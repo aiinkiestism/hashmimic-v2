@@ -8,9 +8,9 @@ import { AppBg, IconLink, MainText3Ds } from "@/components";
 import { useIsMobile } from "@/lib/responsive";
 
 const ICON = {
-  twitter: "/twitter.svg",
+  x: "/x-icon.png",
   linkedin: "/linkedin.png",
-  github: "/github-white.png",
+  github: "/github-icon.svg",
   spotify: "/spotify-icon.png",
   appleMusic: "/apple-music-icon.png",
   youtube: "/youtube-icon.png",
@@ -38,7 +38,7 @@ export default function Who() {
         </Fragment>
       ))}
       <group position={[0, -1, 0]}>
-        <IconLink src={ICON.twitter} position={meshPosition(-1.5, 0.5, 0)} size={geometrySize} url="https://twitter.com/hashmimic" />
+        <IconLink src={ICON.x} position={meshPosition(-1.5, 0.5, 0)} size={geometrySize} url="https://x.com/hashmimic" />
         <IconLink src={ICON.linkedin} position={meshPosition(-0.5, 0.5, 0)} size={geometrySize} url="https://www.linkedin.com/in/keishi-s-665542190/" />
         <IconLink src={ICON.github} position={meshPosition(0.5, 0.5, 0)} size={geometrySize} url="https://github.com/aiinkiestism" />
         <IconLink src={ICON.web3Bio} position={meshPosition(1.5, 0.5, 0)} size={geometrySize} url="https://web3.bio/hashmimic.eth" />
