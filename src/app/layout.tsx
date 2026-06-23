@@ -45,12 +45,17 @@ export const metadata: Metadata = {
     siteName: "Hashmimic",
     locale: "en_US",
     type: "website",
+    images: [
+      { url: "/og/home.png", width: 1200, height: 630, alt: "Hashmimic" },
+      { url: "/og/home-sq.png", width: 1200, height: 1200, alt: "Hashmimic" },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hashmimic.com",
     description: "Hashmimic is an indie hacker and musician.",
     creator: "@hashmimic",
+    images: ["/og/home.png"],
   },
   robots: {
     index: true,

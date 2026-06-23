@@ -1,0 +1,1246 @@
+- generic [active] [ref=e8]:
+  - main [ref=e10]:
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - link [ref=e16] [cursor=pointer]:
+              - /url: /
+              - img [ref=e17]
+            - link "Why Kickresume?" [ref=e21] [cursor=pointer]:
+              - /url: https://www.kickresume.com/en/resumes/
+          - link "Sign Up" [ref=e22] [cursor=pointer]:
+            - /url: /register/
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - heading "Hello, I am Keishi Shimmachi." [level=3] [ref=e26]
+            - generic [ref=e27]:
+              - generic [ref=e28]:
+                - generic [ref=e29]: "Phone number:"
+                - text: +81 (0)80-9145-9765
+              - generic [ref=e30]:
+                - generic [ref=e31]: "Email address:"
+                - text: hashmimic1@gmail.com
+          - link "Contact Me" [ref=e32] [cursor=pointer]:
+            - /url: mailto:hashmimic1@gmail.com
+        - iframe [ref=e34]:
+          - generic [active]:
+            - generic [ref=f2e5]:
+              - generic [ref=f2e7]:
+                - generic [ref=f2e9]:
+                  - generic [ref=f2e10]:
+                    - heading "Keishi Shimmachi" [level=2] [ref=f2e11]:
+                      - generic [ref=f2e12]: Keishi Shimmachi
+                    - generic [ref=f2e13]:
+                      - img [ref=f2e15]
+                      - generic [ref=f2e17]: 28/12/1997
+                    - generic [ref=f2e18]:
+                      - img [ref=f2e20]
+                      - generic [ref=f2e22]: Japan
+                    - generic [ref=f2e23]:
+                      - img [ref=f2e25]
+                      - generic [ref=f2e28]: Soka City 340-0034, Japan
+                    - generic [ref=f2e29]:
+                      - img [ref=f2e31]
+                      - link "+81 (0)80-9145-9765" [ref=f2e34] [cursor=pointer]:
+                        - /url: tel:+81 (0)80-9145-9765
+                    - generic [ref=f2e35]:
+                      - img [ref=f2e37]
+                      - link "hashmimic1@gmail.com" [ref=f2e39] [cursor=pointer]:
+                        - /url: mailto:hashmimic1@gmail.com
+                        - text: hashmimic1
+                        - text: "@gmail.com"
+                    - generic [ref=f2e40]:
+                      - img [ref=f2e42]
+                      - link "https://hashmimic.com" [ref=f2e44] [cursor=pointer]:
+                        - /url: https://hashmimic.com
+                    - generic [ref=f2e45]:
+                      - img [ref=f2e47]
+                      - generic [ref=f2e50]: As of Feb, 2026
+                  - img "avatar" [ref=f2e53]
+                - generic [ref=f2e54]:
+                  - generic [ref=f2e55]:
+                    - heading "Profile" [level=6] [ref=f2e56]:
+                      - generic [ref=f2e58]: Profile
+                    - generic [ref=f2e60]:
+                      - generic [ref=f2e61]: Hi! I'm a software engineer working on web and mobile applications. I have been developing professionally for more than 6 years. Among the companies listed in Work experience below, all I've contributed to from 2021 are sitting in the blockchain industry. Because of this background, I have solid knowledge and experiences regards to blockchain field and stack, and understand the usecase and market of Dapps, Web3, and DAO. Besides, there are a few projects I've worked as side projects, such as stable coin, DAO-to-DAO token swap protocol; a project for ETHAmsterdam Hackathon.
+                      - generic [ref=f2e63]: Althogh I think my srongest skills are in software engineering, my fields are diverse becuase I have learned a lot in the university where teachers and students are all entrepreneur with affluent knowledge and skills and I have passions in learning and researching, especially about technologies, business insights, design, and soft skills. Plus, I know how to move in startup and venture, how to keep motivation and build up skills there.
+                      - generic [ref=f2e65]: Among apealing things mentioned above, I'm into Web3 and DAO. Ever since I knew blockchain, cryptocurrency, Web3, and DAO in 2018, I've been researching because they are missing pieces in today's world and really interesting. Nevertheless, I do believe none of these are silver bullets like web2 tech stacks.
+                  - generic [ref=f2e66]:
+                    - heading "Work Experience" [level=6] [ref=f2e67]:
+                      - generic [ref=f2e69]: Work Experience
+                    - generic [ref=f2e70]:
+                      - generic [ref=f2e71]:
+                        - generic [ref=f2e72]:
+                          - generic [ref=f2e73]:
+                            - img [ref=f2e74]
+                            - text: 10/2025 – present
+                          - generic [ref=f2e77]:
+                            - img [ref=f2e78]
+                            - generic [ref=f2e81]: Remote
+                            - generic [ref=f2e82]: ","
+                            - generic [ref=f2e83]: Japan
+                        - generic [ref=f2e84]: Software Engineer
+                        - generic [ref=f2e85]: estie
+                      - generic [ref=f2e87]:
+                        - generic [ref=f2e88]: "- Fullstack Development of a Commercial Real Estate Brokerage Platform"
+                        - generic [ref=f2e89]: "- Rust (Actix Web), GraphQL, React(Next.js), TypeScript"
+                        - generic [ref=f2e90]: "- Github, AWS infrastracture"
+                    - generic [ref=f2e91]:
+                      - generic [ref=f2e92]:
+                        - generic [ref=f2e93]:
+                          - generic [ref=f2e94]:
+                            - img [ref=f2e95]
+                            - text: 03/2025 – 02/2026
+                          - generic [ref=f2e98]:
+                            - img [ref=f2e99]
+                            - generic [ref=f2e102]: Remote
+                            - generic [ref=f2e103]: ","
+                            - generic [ref=f2e104]: Japan
+                        - generic [ref=f2e105]: Software Engineer
+                        - generic [ref=f2e106]: 3shake
+                      - generic [ref=f2e109]: "- Fullstack Development of a talent matching service for freelance engineers"
+                - generic [ref=f2e111]:
+                  - heading "Work Experience" [level=6] [ref=f2e112]:
+                    - generic [ref=f2e114]: Work Experience
+                  - generic [ref=f2e117]:
+                    - generic [ref=f2e118]: "- React(Next.js), TypeScript, tsrynge, trpc"
+                    - generic [ref=f2e119]: "- Github, GCP, Algolia, Vercel infrastructure"
+                  - generic [ref=f2e120]:
+                    - generic [ref=f2e121]:
+                      - generic [ref=f2e122]:
+                        - generic [ref=f2e123]:
+                          - img [ref=f2e124]
+                          - text: 06/2025
+                        - generic [ref=f2e127]:
+                          - img [ref=f2e128]
+                          - generic [ref=f2e131]: Remote
+                          - generic [ref=f2e132]: ","
+                          - generic [ref=f2e133]: Japan
+                      - generic [ref=f2e134]: Software Engineer
+                      - generic [ref=f2e135]: Vista Cruise Inc.
+                    - list [ref=f2e138]:
+                      - listitem [ref=f2e139]: Avalanche research and node bootstrap
+                  - generic [ref=f2e140]:
+                    - generic [ref=f2e141]:
+                      - generic [ref=f2e142]:
+                        - generic [ref=f2e143]:
+                          - img [ref=f2e144]
+                          - text: 03/2025 – present
+                        - generic [ref=f2e147]:
+                          - img [ref=f2e148]
+                          - generic [ref=f2e151]: Remote
+                          - generic [ref=f2e152]: ","
+                          - generic [ref=f2e153]: Japan
+                      - generic [ref=f2e154]: Software Engineer
+                      - generic [ref=f2e155]: 3shake
+                    - list [ref=f2e158]:
+                      - listitem [ref=f2e159]: Fullstack Development of a talent matching service for freelance engineers
+                      - listitem [ref=f2e160]: React(Next.js), TypeScript, tsrynge, trpc
+                      - listitem [ref=f2e161]: Github, AWS infrastructure
+                  - generic [ref=f2e162]:
+                    - generic [ref=f2e163]:
+                      - generic [ref=f2e164]:
+                        - generic [ref=f2e165]:
+                          - img [ref=f2e166]
+                          - text: 05/2024 – 03/2025
+                        - generic [ref=f2e169]:
+                          - img [ref=f2e170]
+                          - generic [ref=f2e173]: Remote
+                          - generic [ref=f2e174]: ","
+                          - generic [ref=f2e175]: Japan
+                      - generic [ref=f2e176]: Software Engieer
+                      - generic [ref=f2e177]: JINJA Foundation Ltd.
+                    - list [ref=f2e180]:
+                      - listitem [ref=f2e181]: Frontend Development of NFT marketplaces
+                      - listitem [ref=f2e182]: React(Next.js), TypeScript, Node.js
+                      - listitem [ref=f2e183]: GitLab, AWS infrastructure
+                  - generic [ref=f2e184]:
+                    - generic [ref=f2e185]:
+                      - generic [ref=f2e186]:
+                        - generic [ref=f2e187]:
+                          - img [ref=f2e188]
+                          - text: 09/2023 – 03/2024
+                        - generic [ref=f2e191]:
+                          - img [ref=f2e192]
+                          - generic [ref=f2e195]: Tokyo (Almost Remote)
+                          - generic [ref=f2e196]: ","
+                          - generic [ref=f2e197]: Japan
+                      - generic [ref=f2e198]: Backend Engineer
+                      - generic [ref=f2e199]: STANDAGE
+                    - list [ref=f2e202]:
+                      - listitem [ref=f2e203]: Backend development of digital payment with smart contract in global trade
+                      - listitem [ref=f2e204]: Node.js (Hapi)
+                      - listitem [ref=f2e205]: Research for backend stacks migration (Hono, NestJS, Fastify, DrizzleORM, TypeORM, Sequelize v7)
+                      - listitem [ref=f2e206]: Github, GCP, Github Actions, Terraform, Truffle infrastracture
+                  - generic [ref=f2e207]:
+                    - generic [ref=f2e208]:
+                      - generic [ref=f2e209]:
+                        - generic [ref=f2e210]:
+                          - img [ref=f2e211]
+                          - text: 01/2023 – 08/2023
+                        - generic [ref=f2e214]:
+                          - img [ref=f2e215]
+                          - generic [ref=f2e218]: Zug
+                          - generic [ref=f2e219]: ","
+                          - generic [ref=f2e220]: Switzerland
+                      - generic [ref=f2e221]: Software Engineer
+                      - generic [ref=f2e222]: Overlay AG
+                    - list [ref=f2e225]:
+                      - listitem [ref=f2e226]: Full stack Web3 development at "RegDeFi" company
+                      - listitem [ref=f2e227]: React, TypeScript, Node.js, Rust(Concordium)
+                      - listitem [ref=f2e228]: Github, AWS infrastracture
+                  - generic [ref=f2e230]:
+                    - generic [ref=f2e231]:
+                      - generic [ref=f2e232]:
+                        - img [ref=f2e233]
+                        - text: 05/2022 – 12/2022
+                      - generic [ref=f2e236]:
+                        - img [ref=f2e237]
+                        - generic [ref=f2e240]: Dubai
+                        - generic [ref=f2e241]: ","
+                        - generic [ref=f2e242]: United Arab Emirates
+                    - generic [ref=f2e243]: Software Engineer
+                    - generic [ref=f2e244]: ERUCA LAB FZCO
+              - generic [ref=f2e246]:
+                - generic [ref=f2e249]:
+                  - heading "Work Experience" [level=6] [ref=f2e250]:
+                    - generic [ref=f2e252]: Work Experience
+                  - list [ref=f2e256]:
+                    - listitem [ref=f2e257]: Full stack Web3 development of Web3 Music App
+                    - listitem [ref=f2e258]: React(Next.js), React Native, TypeScript, Solidity(Astar Network)
+                    - listitem [ref=f2e259]: Cosmos research for building its own blockchain
+                    - listitem [ref=f2e260]: Github, GCP and AWS, Github Actions infrastracture
+                  - generic [ref=f2e261]:
+                    - generic [ref=f2e262]:
+                      - generic [ref=f2e263]:
+                        - generic [ref=f2e264]:
+                          - img [ref=f2e265]
+                          - text: 01/2021 – 12/2022
+                        - generic [ref=f2e268]:
+                          - img [ref=f2e269]
+                          - generic [ref=f2e272]: Remote
+                          - generic [ref=f2e273]: ","
+                          - generic [ref=f2e274]: Japan
+                      - generic [ref=f2e275]: Software Engineer
+                      - generic [ref=f2e276]: PHI
+                    - list [ref=f2e279]:
+                      - listitem [ref=f2e280]: Full stack web development mainly with JavaScript and TypeScript (Vue.js, Node.js)
+                      - listitem [ref=f2e281]: Web3 tech and DAO research
+                      - listitem [ref=f2e282]: Start-up related works such as market research associated with product pivot and trivial UI/UX design
+                      - listitem [ref=f2e283]: Github, GCP and AWS, Github Actions infrastracture
+                  - generic [ref=f2e284]:
+                    - generic [ref=f2e285]:
+                      - generic [ref=f2e286]:
+                        - generic [ref=f2e287]:
+                          - img [ref=f2e288]
+                          - text: 01/2021 – 06/2021
+                        - generic [ref=f2e291]:
+                          - img [ref=f2e292]
+                          - generic [ref=f2e295]: Tokyo (almost remote)
+                          - generic [ref=f2e296]: ","
+                          - generic [ref=f2e297]: Japan
+                      - generic [ref=f2e298]: Software Engineer
+                      - generic [ref=f2e299]: JPYC
+                    - generic [ref=f2e301]:
+                      - generic [ref=f2e302]: In addition to the below, made efforts of better progress of projects, operational efficiency, organizational system maintainance, by communicating effectively with other close positions, such as designers and customer services.
+                      - list [ref=f2e304]:
+                        - listitem [ref=f2e305]: Development and Maintainance of JPYC Apps, old JPYC Swap
+                      - generic [ref=f2e306]: Nuxt.js (Vue.js), Next.js (React), Node.js
+                      - list [ref=f2e307]:
+                        - listitem [ref=f2e308]: Development and Maintainance of JPYC official site
+                      - generic [ref=f2e309]: Github Actions (CI/CD) integration, i18n, and some other trivial tasks
+                      - list [ref=f2e310]:
+                        - listitem [ref=f2e311]: Design of the corporate site
+                        - listitem [ref=f2e312]: Creation of JPYC English Whitepaper
+                        - listitem [ref=f2e313]: Interaction with overseas business partners with email and video chat
+                        - listitem [ref=f2e314]: Writing an article about DAO that was featured in newsletter
+                        - listitem [ref=f2e315]: Creation of docs for hiring software engineers, interview of candidates
+                        - listitem [ref=f2e316]: Being a facilitator and management of internal meeting for cultual control
+                        - listitem [ref=f2e317]: Github, GCP and AWS, Firebase, Github Actions infrastracture
+                  - generic [ref=f2e318]:
+                    - generic [ref=f2e319]:
+                      - generic [ref=f2e320]:
+                        - generic [ref=f2e321]:
+                          - img [ref=f2e322]
+                          - text: 02/2021 – 04/2021
+                        - generic [ref=f2e325]:
+                          - img [ref=f2e326]
+                          - generic [ref=f2e329]: Remote
+                          - generic [ref=f2e330]: ","
+                          - generic [ref=f2e331]: Japan
+                      - generic [ref=f2e332]: Software Engineer
+                      - generic [ref=f2e333]: Ango-ya
+                    - list [ref=f2e336]:
+                      - listitem [ref=f2e337]: Translation of a few websites including legal statements
+                      - listitem [ref=f2e338]: i18n of a few websites
+                      - listitem [ref=f2e339]: React (Next.js), Node.js (NestJs)
+                      - listitem [ref=f2e340]: Github, AWS, Docker, Docker-compose infrastracture
+                - generic [ref=f2e341]:
+                  - generic [ref=f2e342]:
+                    - heading "Work Experience" [level=6] [ref=f2e343]:
+                      - generic [ref=f2e345]: Work Experience
+                    - generic [ref=f2e346]:
+                      - generic [ref=f2e347]:
+                        - generic [ref=f2e348]:
+                          - generic [ref=f2e349]:
+                            - img [ref=f2e350]
+                            - text: 09/2020 – 12/2020
+                          - generic [ref=f2e353]:
+                            - img [ref=f2e354]
+                            - generic [ref=f2e357]: Tokyo
+                            - generic [ref=f2e358]: ","
+                            - generic [ref=f2e359]: Japan
+                        - generic [ref=f2e360]: Software Engineer
+                        - generic [ref=f2e361]: Cayto
+                      - list [ref=f2e364]:
+                        - listitem [ref=f2e365]: iOS and front-end web development with Dart framework, Flutter
+                        - listitem [ref=f2e366]: Minor backend tasks (Go, SQL, Elasticsearch)
+                        - listitem [ref=f2e367]: Github and Bitbucket, AWS, Elastic Stack(Elasticsearch, Kibana), and Firebase, Docker, Docker-compose, Circle CI infrastructure.
+                    - generic [ref=f2e368]:
+                      - generic [ref=f2e369]:
+                        - generic [ref=f2e370]:
+                          - generic [ref=f2e371]:
+                            - img [ref=f2e372]
+                            - text: 12/2019 – 04/2020
+                          - generic [ref=f2e375]:
+                            - img [ref=f2e376]
+                            - generic [ref=f2e379]: Remote
+                            - generic [ref=f2e380]: ","
+                            - generic [ref=f2e381]: Japan
+                        - generic [ref=f2e382]: Front-end web developer, Researcher
+                        - generic [ref=f2e383]: PHI
+                      - list [ref=f2e386]:
+                        - listitem [ref=f2e387]: Front-end web development with JavaScript
+                        - listitem [ref=f2e388]: DAO research
+                        - listitem [ref=f2e389]: Start-up related works like market research, UI/UX design
+                        - listitem [ref=f2e390]: Github, AWS infrastracture
+                    - generic [ref=f2e391]:
+                      - generic [ref=f2e392]:
+                        - generic [ref=f2e393]:
+                          - generic [ref=f2e394]:
+                            - img [ref=f2e395]
+                            - text: 05/2019 – 12/2019
+                          - generic [ref=f2e398]:
+                            - img [ref=f2e399]
+                            - generic [ref=f2e402]: Tokyo
+                            - generic [ref=f2e403]: ","
+                            - generic [ref=f2e404]: Japan
+                        - generic [ref=f2e405]: Front-end web developer
+                        - generic [ref=f2e406]: idearecord
+                      - generic [ref=f2e408]:
+                        - list [ref=f2e409]:
+                          - listitem [ref=f2e410]: Front-end web development and front-end performance tuning
+                        - generic [ref=f2e411]: JavaScript (raw and jQuery), PHP, WordPress
+                        - list [ref=f2e412]:
+                          - listitem [ref=f2e413]: Bitbucket, local rental server infrastracture
+                  - generic [ref=f2e414]:
+                    - heading "Education" [level=6] [ref=f2e415]:
+                      - generic [ref=f2e417]: Education
+                    - generic [ref=f2e418]:
+                      - generic [ref=f2e419]:
+                        - generic [ref=f2e420]:
+                          - generic [ref=f2e421]:
+                            - img [ref=f2e422]
+                            - text: 10/2018 – 10/2024
+                          - generic [ref=f2e425]:
+                            - img [ref=f2e426]
+                            - generic [ref=f2e429]: Tokyo (almost remote)
+                            - generic [ref=f2e430]: ","
+                            - generic [ref=f2e431]: Japan
+                        - generic [ref=f2e432]: Global Business Administration | Bachelor of Business Administration
+                        - generic [ref=f2e433]: Business Breakthrough University
+                      - generic [ref=f2e436]: I have learned business here becuase I wanted to develop business and software engineering skills at the same time, and chose Global Business Administration with a thought software engineering skills can be nurtured on my own.
+                    - generic [ref=f2e437]:
+                      - generic [ref=f2e438]:
+                        - generic [ref=f2e439]:
+                          - generic [ref=f2e440]:
+                            - img [ref=f2e441]
+                            - text: 04/2017 – 09/2018
+                          - generic [ref=f2e444]:
+                            - img [ref=f2e445]
+                            - generic [ref=f2e448]: Saitama
+                            - generic [ref=f2e449]: ","
+                            - generic [ref=f2e450]: Tokyo
+                        - generic [ref=f2e451]: English
+                        - generic [ref=f2e452]: Dokkyo University
+                      - generic [ref=f2e455]: I dropped for transferring university.
+                  - generic [ref=f2e456]:
+                    - heading "Skills" [level=6] [ref=f2e457]:
+                      - generic [ref=f2e459]: Skills
+                    - generic [ref=f2e461]:
+                      - generic [ref=f2e462]:
+                        - img [ref=f2e463]
+                        - text: Development Skills
+                      - generic [ref=f2e466]:
+                        - generic [ref=f2e468]: JavaScript
+                        - generic [ref=f2e473]: TypeScript
+                        - generic [ref=f2e478]: Node.js
+                        - generic [ref=f2e483]: Solidity
+                        - generic [ref=f2e488]: Dart
+                        - generic [ref=f2e493]: Go
+                        - generic [ref=f2e498]: Rust
+                        - generic [ref=f2e503]: WebGL
+                        - generic [ref=f2e508]: GCP/Firebase
+                        - generic [ref=f2e513]: AWS
+              - generic [ref=f2e520]:
+                - generic [ref=f2e521]:
+                  - heading "Skills" [level=6] [ref=f2e522]:
+                    - generic [ref=f2e524]: Skills
+                  - generic [ref=f2e526]:
+                    - generic [ref=f2e527]:
+                      - img [ref=f2e528]
+                      - text: Development Skills
+                    - generic [ref=f2e531]:
+                      - generic [ref=f2e533]: Docker
+                      - generic [ref=f2e538]: Docker-compose
+                      - generic [ref=f2e543]: CI/CD
+                      - generic [ref=f2e548]: SQL
+                      - generic [ref=f2e553]: NoSQL
+                      - generic [ref=f2e558]: Elastic Stack
+                      - generic [ref=f2e563]: UI/UX design
+                      - generic [ref=f2e568]: Figma
+                  - generic [ref=f2e573]:
+                    - generic [ref=f2e574]:
+                      - img [ref=f2e575]
+                      - text: Languages
+                    - generic [ref=f2e578]:
+                      - generic [ref=f2e580]: Japanese
+                      - generic [ref=f2e585]: English
+                      - generic [ref=f2e590]: French
+                      - generic [ref=f2e595]: Spanish
+                - generic [ref=f2e599]:
+                  - heading "Strengths and Traits" [level=6] [ref=f2e600]:
+                    - generic [ref=f2e602]: Strengths and Traits
+                  - generic [ref=f2e603]:
+                    - generic [ref=f2e606]: Lean Startup
+                    - generic [ref=f2e609]: Teamwork
+                    - generic [ref=f2e612]: Flexibility
+                    - generic [ref=f2e615]: Creativity
+                    - generic [ref=f2e618]: Dedication
+                    - generic [ref=f2e621]: Passion
+                    - generic [ref=f2e624]: Honesty
+                - generic [ref=f2e625]:
+                  - heading "Hobbies" [level=6] [ref=f2e626]:
+                    - generic [ref=f2e628]: Hobbies
+                  - generic [ref=f2e629]:
+                    - generic [ref=f2e630]:
+                      - img [ref=f2e632]
+                      - generic [ref=f2e635]: Music
+                    - generic [ref=f2e636]:
+                      - img [ref=f2e638]
+                      - generic [ref=f2e640]: Technologies
+                    - generic [ref=f2e641]:
+                      - img [ref=f2e643]
+                      - generic [ref=f2e646]: Reading
+                  - generic [ref=f2e647]:
+                    - generic [ref=f2e648]:
+                      - img [ref=f2e650]
+                      - generic [ref=f2e652]: Finding good restaurants
+                    - generic [ref=f2e653]:
+                      - img [ref=f2e655]
+                      - generic [ref=f2e657]: Workout
+                    - generic [ref=f2e658]:
+                      - img [ref=f2e660]
+                      - generic [ref=f2e662]: Well-being
+            - generic [ref=f2e671]:
+              - generic [ref=f2e673]:
+                - generic [ref=f2e674]:
+                  - heading "Keishi Shimmachi" [level=2] [ref=f2e675]:
+                    - generic [ref=f2e676]: Keishi Shimmachi
+                  - generic [ref=f2e677]:
+                    - img [ref=f2e679]
+                    - generic [ref=f2e681]: 28/12/1997
+                  - generic [ref=f2e682]:
+                    - img [ref=f2e684]
+                    - generic [ref=f2e686]: Japan
+                  - generic [ref=f2e687]:
+                    - img [ref=f2e689]
+                    - generic [ref=f2e692]: Soka City 340-0034, Japan
+                  - generic [ref=f2e693]:
+                    - img [ref=f2e695]
+                    - link "+81 (0)80-9145-9765" [ref=f2e698] [cursor=pointer]:
+                      - /url: tel:+81 (0)80-9145-9765
+                  - generic [ref=f2e699]:
+                    - img [ref=f2e701]
+                    - link "hashmimic1@gmail.com" [ref=f2e703] [cursor=pointer]:
+                      - /url: mailto:hashmimic1@gmail.com
+                      - text: hashmimic1
+                      - text: "@gmail.com"
+                  - generic [ref=f2e704]:
+                    - img [ref=f2e706]
+                    - link "https://hashmimic.com" [ref=f2e708] [cursor=pointer]:
+                      - /url: https://hashmimic.com
+                  - generic [ref=f2e709]:
+                    - img [ref=f2e711]
+                    - generic [ref=f2e714]: As of Feb, 2026
+                - img "avatar" [ref=f2e717]
+              - generic [ref=f2e718]:
+                - generic [ref=f2e719]:
+                  - heading "Keishi Shimmachi" [level=2] [ref=f2e720]:
+                    - generic [ref=f2e721]: Keishi Shimmachi
+                  - generic [ref=f2e722]:
+                    - img [ref=f2e724]
+                    - generic [ref=f2e726]: 28/12/1997
+                  - generic [ref=f2e727]:
+                    - img [ref=f2e729]
+                    - generic [ref=f2e731]: Japan
+                  - generic [ref=f2e732]:
+                    - img [ref=f2e734]
+                    - generic [ref=f2e737]: Soka City 340-0034, Japan
+                  - generic [ref=f2e738]:
+                    - img [ref=f2e740]
+                    - link "+81 (0)80-9145-9765" [ref=f2e743] [cursor=pointer]:
+                      - /url: tel:+81 (0)80-9145-9765
+                  - generic [ref=f2e744]:
+                    - img [ref=f2e746]
+                    - link "hashmimic1@gmail.com" [ref=f2e748] [cursor=pointer]:
+                      - /url: mailto:hashmimic1@gmail.com
+                      - text: hashmimic1
+                      - text: "@gmail.com"
+                  - generic [ref=f2e749]:
+                    - img [ref=f2e751]
+                    - link "https://hashmimic.com" [ref=f2e753] [cursor=pointer]:
+                      - /url: https://hashmimic.com
+                  - generic [ref=f2e754]:
+                    - img [ref=f2e756]
+                    - generic [ref=f2e759]: As of Feb, 2026
+                - img "avatar" [ref=f2e762]
+              - generic [ref=f2e763]:
+                - heading "Profile" [level=6] [ref=f2e765]:
+                  - generic [ref=f2e767]: Profile
+                - generic [ref=f2e768]:
+                  - heading "Profile" [level=6] [ref=f2e769]:
+                    - generic [ref=f2e771]: Profile
+                  - generic [ref=f2e773]:
+                    - generic [ref=f2e774]: Hi! I'm a software engineer working on web and mobile applications. I have been developing professionally for more than 6 years. Among the companies listed in Work experience below, all I've contributed to from 2021 are sitting in the blockchain industry. Because of this background, I have solid knowledge and experiences regards to blockchain field and stack, and understand the usecase and market of Dapps, Web3, and DAO. Besides, there are a few projects I've worked as side projects, such as stable coin, DAO-to-DAO token swap protocol; a project for ETHAmsterdam Hackathon.
+                    - generic [ref=f2e775]: Hi! I'm a software engineer working on web and mobile applications. I have been developing professionally for more than 6 years. Among the companies listed in Work experience below, all I've contributed to from 2021 are sitting in the blockchain industry. Because of this background, I have solid knowledge and experiences regards to blockchain field and stack, and understand the usecase and market of Dapps, Web3, and DAO. Besides, there are a few projects I've worked as side projects, such as stable coin, DAO-to-DAO token swap protocol; a project for ETHAmsterdam Hackathon.
+                    - generic [ref=f2e778]: Althogh I think my srongest skills are in software engineering, my fields are diverse becuase I have learned a lot in the university where teachers and students are all entrepreneur with affluent knowledge and skills and I have passions in learning and researching, especially about technologies, business insights, design, and soft skills. Plus, I know how to move in startup and venture, how to keep motivation and build up skills there.
+                    - generic [ref=f2e779]: Althogh I think my srongest skills are in software engineering, my fields are diverse becuase I have learned a lot in the university where teachers and students are all entrepreneur with affluent knowledge and skills and I have passions in learning and researching, especially about technologies, business insights, design, and soft skills. Plus, I know how to move in startup and venture, how to keep motivation and build up skills there.
+                    - generic [ref=f2e782]: Among apealing things mentioned above, I'm into Web3 and DAO. Ever since I knew blockchain, cryptocurrency, Web3, and DAO in 2018, I've been researching because they are missing pieces in today's world and really interesting. Nevertheless, I do believe none of these are silver bullets like web2 tech stacks.
+                    - generic [ref=f2e783]: Among apealing things mentioned above, I'm into Web3 and DAO. Ever since I knew blockchain, cryptocurrency, Web3, and DAO in 2018, I've been researching because they are missing pieces in today's world and really interesting. Nevertheless, I do believe none of these are silver bullets like web2 tech stacks.
+                - heading "Work Experience" [level=6] [ref=f2e785]:
+                  - generic [ref=f2e787]: Work Experience
+                - generic [ref=f2e788]:
+                  - heading "Work Experience" [level=6] [ref=f2e789]:
+                    - generic [ref=f2e791]: Work Experience
+                  - generic [ref=f2e793]:
+                    - generic [ref=f2e794]:
+                      - generic [ref=f2e795]:
+                        - generic [ref=f2e796]:
+                          - img [ref=f2e797]
+                          - text: 10/2025 – present
+                        - generic [ref=f2e800]:
+                          - img [ref=f2e801]
+                          - generic [ref=f2e804]: Remote
+                          - generic [ref=f2e805]: ","
+                          - generic [ref=f2e806]: Japan
+                      - generic [ref=f2e807]: Software Engineer
+                      - generic [ref=f2e808]: estie
+                    - generic [ref=f2e809]:
+                      - generic [ref=f2e810]:
+                        - generic [ref=f2e811]:
+                          - img [ref=f2e812]
+                          - text: 10/2025 – present
+                        - generic [ref=f2e815]:
+                          - img [ref=f2e816]
+                          - generic [ref=f2e819]: Remote
+                          - generic [ref=f2e820]: ","
+                          - generic [ref=f2e821]: Japan
+                      - generic [ref=f2e822]: Software Engineer
+                      - generic [ref=f2e823]: estie
+                    - generic [ref=f2e825]:
+                      - generic [ref=f2e826]: "- Fullstack Development of a Commercial Real Estate Brokerage Platform"
+                      - generic [ref=f2e827]: "- Fullstack Development of a Commercial Real Estate Brokerage Platform"
+                      - generic [ref=f2e828]: "- Rust (Actix Web), GraphQL, React(Next.js), TypeScript"
+                      - generic [ref=f2e829]: "- Rust (Actix Web), GraphQL, React(Next.js), TypeScript"
+                      - generic [ref=f2e830]: "- Github, AWS infrastracture"
+                      - generic [ref=f2e831]: "- Github, AWS infrastracture"
+                  - generic [ref=f2e833]:
+                    - generic [ref=f2e834]:
+                      - generic [ref=f2e835]:
+                        - generic [ref=f2e836]:
+                          - img [ref=f2e837]
+                          - text: 03/2025 – 02/2026
+                        - generic [ref=f2e840]:
+                          - img [ref=f2e841]
+                          - generic [ref=f2e844]: Remote
+                          - generic [ref=f2e845]: ","
+                          - generic [ref=f2e846]: Japan
+                      - generic [ref=f2e847]: Software Engineer
+                      - generic [ref=f2e848]: 3shake
+                    - generic [ref=f2e849]:
+                      - generic [ref=f2e850]:
+                        - generic [ref=f2e851]:
+                          - img [ref=f2e852]
+                          - text: 03/2025 – 02/2026
+                        - generic [ref=f2e855]:
+                          - img [ref=f2e856]
+                          - generic [ref=f2e859]: Remote
+                          - generic [ref=f2e860]: ","
+                          - generic [ref=f2e861]: Japan
+                      - generic [ref=f2e862]: Software Engineer
+                      - generic [ref=f2e863]: 3shake
+                    - generic [ref=f2e865]:
+                      - generic [ref=f2e866]: "- Fullstack Development of a talent matching service for freelance engineers"
+                      - generic [ref=f2e867]: "- Fullstack Development of a talent matching service for freelance engineers"
+                      - generic [ref=f2e868]: "- React(Next.js), TypeScript, tsrynge, trpc"
+                      - generic [ref=f2e869]: "- React(Next.js), TypeScript, tsrynge, trpc"
+                      - generic [ref=f2e870]: "- Github, GCP, Algolia, Vercel infrastructure"
+                      - generic [ref=f2e871]: "- Github, GCP, Algolia, Vercel infrastructure"
+                  - generic [ref=f2e873]:
+                    - generic [ref=f2e874]:
+                      - generic [ref=f2e875]:
+                        - generic [ref=f2e876]:
+                          - img [ref=f2e877]
+                          - text: 06/2025
+                        - generic [ref=f2e880]:
+                          - img [ref=f2e881]
+                          - generic [ref=f2e884]: Remote
+                          - generic [ref=f2e885]: ","
+                          - generic [ref=f2e886]: Japan
+                      - generic [ref=f2e887]: Software Engineer
+                      - generic [ref=f2e888]: Vista Cruise Inc.
+                    - generic [ref=f2e889]:
+                      - generic [ref=f2e890]:
+                        - generic [ref=f2e891]:
+                          - img [ref=f2e892]
+                          - text: 06/2025
+                        - generic [ref=f2e895]:
+                          - img [ref=f2e896]
+                          - generic [ref=f2e899]: Remote
+                          - generic [ref=f2e900]: ","
+                          - generic [ref=f2e901]: Japan
+                      - generic [ref=f2e902]: Software Engineer
+                      - generic [ref=f2e903]: Vista Cruise Inc.
+                    - generic [ref=f2e905]:
+                      - list
+                      - list [ref=f2e906]:
+                        - listitem [ref=f2e907]: Avalanche research and node bootstrap
+                        - listitem [ref=f2e908]: Avalanche research and node bootstrap
+                  - generic [ref=f2e910]:
+                    - generic [ref=f2e911]:
+                      - generic [ref=f2e912]:
+                        - generic [ref=f2e913]:
+                          - img [ref=f2e914]
+                          - text: 03/2025 – present
+                        - generic [ref=f2e917]:
+                          - img [ref=f2e918]
+                          - generic [ref=f2e921]: Remote
+                          - generic [ref=f2e922]: ","
+                          - generic [ref=f2e923]: Japan
+                      - generic [ref=f2e924]: Software Engineer
+                      - generic [ref=f2e925]: 3shake
+                    - generic [ref=f2e926]:
+                      - generic [ref=f2e927]:
+                        - generic [ref=f2e928]:
+                          - img [ref=f2e929]
+                          - text: 03/2025 – present
+                        - generic [ref=f2e932]:
+                          - img [ref=f2e933]
+                          - generic [ref=f2e936]: Remote
+                          - generic [ref=f2e937]: ","
+                          - generic [ref=f2e938]: Japan
+                      - generic [ref=f2e939]: Software Engineer
+                      - generic [ref=f2e940]: 3shake
+                    - generic [ref=f2e942]:
+                      - list
+                      - list [ref=f2e943]:
+                        - listitem [ref=f2e944]: Fullstack Development of a talent matching service for freelance engineers
+                        - listitem [ref=f2e945]: Fullstack Development of a talent matching service for freelance engineers
+                        - listitem [ref=f2e946]: React(Next.js), TypeScript, tsrynge, trpc
+                        - listitem [ref=f2e947]: React(Next.js), TypeScript, tsrynge, trpc
+                        - listitem [ref=f2e948]: Github, AWS infrastructure
+                        - listitem [ref=f2e949]: Github, AWS infrastructure
+                  - generic [ref=f2e951]:
+                    - generic [ref=f2e952]:
+                      - generic [ref=f2e953]:
+                        - generic [ref=f2e954]:
+                          - img [ref=f2e955]
+                          - text: 05/2024 – 03/2025
+                        - generic [ref=f2e958]:
+                          - img [ref=f2e959]
+                          - generic [ref=f2e962]: Remote
+                          - generic [ref=f2e963]: ","
+                          - generic [ref=f2e964]: Japan
+                      - generic [ref=f2e965]: Software Engieer
+                      - generic [ref=f2e966]: JINJA Foundation Ltd.
+                    - generic [ref=f2e967]:
+                      - generic [ref=f2e968]:
+                        - generic [ref=f2e969]:
+                          - img [ref=f2e970]
+                          - text: 05/2024 – 03/2025
+                        - generic [ref=f2e973]:
+                          - img [ref=f2e974]
+                          - generic [ref=f2e977]: Remote
+                          - generic [ref=f2e978]: ","
+                          - generic [ref=f2e979]: Japan
+                      - generic [ref=f2e980]: Software Engieer
+                      - generic [ref=f2e981]: JINJA Foundation Ltd.
+                    - generic [ref=f2e983]:
+                      - list
+                      - list [ref=f2e984]:
+                        - listitem [ref=f2e985]: Frontend Development of NFT marketplaces
+                        - listitem [ref=f2e986]: Frontend Development of NFT marketplaces
+                        - listitem [ref=f2e987]: React(Next.js), TypeScript, Node.js
+                        - listitem [ref=f2e988]: React(Next.js), TypeScript, Node.js
+                        - listitem [ref=f2e989]: GitLab, AWS infrastructure
+                        - listitem [ref=f2e990]: GitLab, AWS infrastructure
+                  - generic [ref=f2e992]:
+                    - generic [ref=f2e993]:
+                      - generic [ref=f2e994]:
+                        - generic [ref=f2e995]:
+                          - img [ref=f2e996]
+                          - text: 09/2023 – 03/2024
+                        - generic [ref=f2e999]:
+                          - img [ref=f2e1000]
+                          - generic [ref=f2e1003]: Tokyo (Almost Remote)
+                          - generic [ref=f2e1004]: ","
+                          - generic [ref=f2e1005]: Japan
+                      - generic [ref=f2e1006]: Backend Engineer
+                      - generic [ref=f2e1007]: STANDAGE
+                    - generic [ref=f2e1008]:
+                      - generic [ref=f2e1009]:
+                        - generic [ref=f2e1010]:
+                          - img [ref=f2e1011]
+                          - text: 09/2023 – 03/2024
+                        - generic [ref=f2e1014]:
+                          - img [ref=f2e1015]
+                          - generic [ref=f2e1018]: Tokyo (Almost Remote)
+                          - generic [ref=f2e1019]: ","
+                          - generic [ref=f2e1020]: Japan
+                      - generic [ref=f2e1021]: Backend Engineer
+                      - generic [ref=f2e1022]: STANDAGE
+                    - generic [ref=f2e1024]:
+                      - list
+                      - list [ref=f2e1025]:
+                        - listitem [ref=f2e1026]: Backend development of digital payment with smart contract in global trade
+                        - listitem [ref=f2e1027]: Backend development of digital payment with smart contract in global trade
+                        - listitem [ref=f2e1028]: Node.js (Hapi)
+                        - listitem [ref=f2e1029]: Node.js (Hapi)
+                        - listitem [ref=f2e1030]: Research for backend stacks migration (Hono, NestJS, Fastify, DrizzleORM, TypeORM, Sequelize v7)
+                        - listitem [ref=f2e1031]: Research for backend stacks migration (Hono, NestJS, Fastify, DrizzleORM, TypeORM, Sequelize v7)
+                        - listitem [ref=f2e1032]: Github, GCP, Github Actions, Terraform, Truffle infrastracture
+                        - listitem [ref=f2e1033]: Github, GCP, Github Actions, Terraform, Truffle infrastracture
+                  - generic [ref=f2e1035]:
+                    - generic [ref=f2e1036]:
+                      - generic [ref=f2e1037]:
+                        - generic [ref=f2e1038]:
+                          - img [ref=f2e1039]
+                          - text: 01/2023 – 08/2023
+                        - generic [ref=f2e1042]:
+                          - img [ref=f2e1043]
+                          - generic [ref=f2e1046]: Zug
+                          - generic [ref=f2e1047]: ","
+                          - generic [ref=f2e1048]: Switzerland
+                      - generic [ref=f2e1049]: Software Engineer
+                      - generic [ref=f2e1050]: Overlay AG
+                    - generic [ref=f2e1051]:
+                      - generic [ref=f2e1052]:
+                        - generic [ref=f2e1053]:
+                          - img [ref=f2e1054]
+                          - text: 01/2023 – 08/2023
+                        - generic [ref=f2e1057]:
+                          - img [ref=f2e1058]
+                          - generic [ref=f2e1061]: Zug
+                          - generic [ref=f2e1062]: ","
+                          - generic [ref=f2e1063]: Switzerland
+                      - generic [ref=f2e1064]: Software Engineer
+                      - generic [ref=f2e1065]: Overlay AG
+                    - generic [ref=f2e1067]:
+                      - list
+                      - list [ref=f2e1068]:
+                        - listitem [ref=f2e1069]: Full stack Web3 development at "RegDeFi" company
+                        - listitem [ref=f2e1070]: Full stack Web3 development at "RegDeFi" company
+                        - listitem [ref=f2e1071]: React, TypeScript, Node.js, Rust(Concordium)
+                        - listitem [ref=f2e1072]: React, TypeScript, Node.js, Rust(Concordium)
+                        - listitem [ref=f2e1073]: Github, AWS infrastracture
+                        - listitem [ref=f2e1074]: Github, AWS infrastracture
+                  - generic [ref=f2e1076]:
+                    - generic [ref=f2e1077]:
+                      - generic [ref=f2e1078]:
+                        - generic [ref=f2e1079]:
+                          - img [ref=f2e1080]
+                          - text: 05/2022 – 12/2022
+                        - generic [ref=f2e1083]:
+                          - img [ref=f2e1084]
+                          - generic [ref=f2e1087]: Dubai
+                          - generic [ref=f2e1088]: ","
+                          - generic [ref=f2e1089]: United Arab Emirates
+                      - generic [ref=f2e1090]: Software Engineer
+                      - generic [ref=f2e1091]: ERUCA LAB FZCO
+                    - generic [ref=f2e1092]:
+                      - generic [ref=f2e1093]:
+                        - generic [ref=f2e1094]:
+                          - img [ref=f2e1095]
+                          - text: 05/2022 – 12/2022
+                        - generic [ref=f2e1098]:
+                          - img [ref=f2e1099]
+                          - generic [ref=f2e1102]: Dubai
+                          - generic [ref=f2e1103]: ","
+                          - generic [ref=f2e1104]: United Arab Emirates
+                      - generic [ref=f2e1105]: Software Engineer
+                      - generic [ref=f2e1106]: ERUCA LAB FZCO
+                    - generic [ref=f2e1108]:
+                      - list
+                      - list [ref=f2e1109]:
+                        - listitem [ref=f2e1110]: Full stack Web3 development of Web3 Music App
+                        - listitem [ref=f2e1111]: Full stack Web3 development of Web3 Music App
+                        - listitem [ref=f2e1112]: React(Next.js), React Native, TypeScript, Solidity(Astar Network)
+                        - listitem [ref=f2e1113]: React(Next.js), React Native, TypeScript, Solidity(Astar Network)
+                        - listitem [ref=f2e1114]: Cosmos research for building its own blockchain
+                        - listitem [ref=f2e1115]: Cosmos research for building its own blockchain
+                        - listitem [ref=f2e1116]: Github, GCP and AWS, Github Actions infrastracture
+                        - listitem [ref=f2e1117]: Github, GCP and AWS, Github Actions infrastracture
+                  - generic [ref=f2e1119]:
+                    - generic [ref=f2e1120]:
+                      - generic [ref=f2e1121]:
+                        - generic [ref=f2e1122]:
+                          - img [ref=f2e1123]
+                          - text: 01/2021 – 12/2022
+                        - generic [ref=f2e1126]:
+                          - img [ref=f2e1127]
+                          - generic [ref=f2e1130]: Remote
+                          - generic [ref=f2e1131]: ","
+                          - generic [ref=f2e1132]: Japan
+                      - generic [ref=f2e1133]: Software Engineer
+                      - generic [ref=f2e1134]: PHI
+                    - generic [ref=f2e1135]:
+                      - generic [ref=f2e1136]:
+                        - generic [ref=f2e1137]:
+                          - img [ref=f2e1138]
+                          - text: 01/2021 – 12/2022
+                        - generic [ref=f2e1141]:
+                          - img [ref=f2e1142]
+                          - generic [ref=f2e1145]: Remote
+                          - generic [ref=f2e1146]: ","
+                          - generic [ref=f2e1147]: Japan
+                      - generic [ref=f2e1148]: Software Engineer
+                      - generic [ref=f2e1149]: PHI
+                    - generic [ref=f2e1151]:
+                      - list
+                      - list [ref=f2e1152]:
+                        - listitem [ref=f2e1153]: Full stack web development mainly with JavaScript and TypeScript (Vue.js, Node.js)
+                        - listitem [ref=f2e1154]: Full stack web development mainly with JavaScript and TypeScript (Vue.js, Node.js)
+                        - listitem [ref=f2e1155]: Web3 tech and DAO research
+                        - listitem [ref=f2e1156]: Web3 tech and DAO research
+                        - listitem [ref=f2e1157]: Start-up related works such as market research associated with product pivot and trivial UI/UX design
+                        - listitem [ref=f2e1158]: Start-up related works such as market research associated with product pivot and trivial UI/UX design
+                        - listitem [ref=f2e1159]: Github, GCP and AWS, Github Actions infrastracture
+                        - listitem [ref=f2e1160]: Github, GCP and AWS, Github Actions infrastracture
+                  - generic [ref=f2e1162]:
+                    - generic [ref=f2e1163]:
+                      - generic [ref=f2e1164]:
+                        - generic [ref=f2e1165]:
+                          - img [ref=f2e1166]
+                          - text: 01/2021 – 06/2021
+                        - generic [ref=f2e1169]:
+                          - img [ref=f2e1170]
+                          - generic [ref=f2e1173]: Tokyo (almost remote)
+                          - generic [ref=f2e1174]: ","
+                          - generic [ref=f2e1175]: Japan
+                      - generic [ref=f2e1176]: Software Engineer
+                      - generic [ref=f2e1177]: JPYC
+                    - generic [ref=f2e1178]:
+                      - generic [ref=f2e1179]:
+                        - generic [ref=f2e1180]:
+                          - img [ref=f2e1181]
+                          - text: 01/2021 – 06/2021
+                        - generic [ref=f2e1184]:
+                          - img [ref=f2e1185]
+                          - generic [ref=f2e1188]: Tokyo (almost remote)
+                          - generic [ref=f2e1189]: ","
+                          - generic [ref=f2e1190]: Japan
+                      - generic [ref=f2e1191]: Software Engineer
+                      - generic [ref=f2e1192]: JPYC
+                    - generic [ref=f2e1194]:
+                      - generic [ref=f2e1195]: In addition to the below, made efforts of better progress of projects, operational efficiency, organizational system maintainance, by communicating effectively with other close positions, such as designers and customer services.
+                      - generic [ref=f2e1196]: In addition to the below, made efforts of better progress of projects, operational efficiency, organizational system maintainance, by communicating effectively with other close positions, such as designers and customer services.
+                      - list
+                      - list [ref=f2e1199]:
+                        - listitem [ref=f2e1200]: Development and Maintainance of JPYC Apps, old JPYC Swap
+                        - listitem [ref=f2e1201]: Development and Maintainance of JPYC Apps, old JPYC Swap
+                      - generic [ref=f2e1202]: Nuxt.js (Vue.js), Next.js (React), Node.js
+                      - generic [ref=f2e1203]: Nuxt.js (Vue.js), Next.js (React), Node.js
+                      - list
+                      - list [ref=f2e1204]:
+                        - listitem [ref=f2e1205]: Development and Maintainance of JPYC official site
+                        - listitem [ref=f2e1206]: Development and Maintainance of JPYC official site
+                      - generic [ref=f2e1207]: Github Actions (CI/CD) integration, i18n, and some other trivial tasks
+                      - generic [ref=f2e1208]: Github Actions (CI/CD) integration, i18n, and some other trivial tasks
+                      - list
+                      - list [ref=f2e1209]:
+                        - listitem [ref=f2e1210]: Design of the corporate site
+                        - listitem [ref=f2e1211]: Design of the corporate site
+                        - listitem [ref=f2e1212]: Creation of JPYC English Whitepaper
+                        - listitem [ref=f2e1213]: Creation of JPYC English Whitepaper
+                        - listitem [ref=f2e1214]: Interaction with overseas business partners with email and video chat
+                        - listitem [ref=f2e1215]: Interaction with overseas business partners with email and video chat
+                        - listitem [ref=f2e1216]: Writing an article about DAO that was featured in newsletter
+                        - listitem [ref=f2e1217]: Writing an article about DAO that was featured in newsletter
+                        - listitem [ref=f2e1218]: Creation of docs for hiring software engineers, interview of candidates
+                        - listitem [ref=f2e1219]: Creation of docs for hiring software engineers, interview of candidates
+                        - listitem [ref=f2e1220]: Being a facilitator and management of internal meeting for cultual control
+                        - listitem [ref=f2e1221]: Being a facilitator and management of internal meeting for cultual control
+                        - listitem [ref=f2e1222]: Github, GCP and AWS, Firebase, Github Actions infrastracture
+                        - listitem [ref=f2e1223]: Github, GCP and AWS, Firebase, Github Actions infrastracture
+                  - generic [ref=f2e1225]:
+                    - generic [ref=f2e1226]:
+                      - generic [ref=f2e1227]:
+                        - generic [ref=f2e1228]:
+                          - img [ref=f2e1229]
+                          - text: 02/2021 – 04/2021
+                        - generic [ref=f2e1232]:
+                          - img [ref=f2e1233]
+                          - generic [ref=f2e1236]: Remote
+                          - generic [ref=f2e1237]: ","
+                          - generic [ref=f2e1238]: Japan
+                      - generic [ref=f2e1239]: Software Engineer
+                      - generic [ref=f2e1240]: Ango-ya
+                    - generic [ref=f2e1241]:
+                      - generic [ref=f2e1242]:
+                        - generic [ref=f2e1243]:
+                          - img [ref=f2e1244]
+                          - text: 02/2021 – 04/2021
+                        - generic [ref=f2e1247]:
+                          - img [ref=f2e1248]
+                          - generic [ref=f2e1251]: Remote
+                          - generic [ref=f2e1252]: ","
+                          - generic [ref=f2e1253]: Japan
+                      - generic [ref=f2e1254]: Software Engineer
+                      - generic [ref=f2e1255]: Ango-ya
+                    - generic [ref=f2e1257]:
+                      - list
+                      - list [ref=f2e1258]:
+                        - listitem [ref=f2e1259]: Translation of a few websites including legal statements
+                        - listitem [ref=f2e1260]: Translation of a few websites including legal statements
+                        - listitem [ref=f2e1261]: i18n of a few websites
+                        - listitem [ref=f2e1262]: i18n of a few websites
+                        - listitem [ref=f2e1263]: React (Next.js), Node.js (NestJs)
+                        - listitem [ref=f2e1264]: React (Next.js), Node.js (NestJs)
+                        - listitem [ref=f2e1265]: Github, AWS, Docker, Docker-compose infrastracture
+                        - listitem [ref=f2e1266]: Github, AWS, Docker, Docker-compose infrastracture
+                  - generic [ref=f2e1268]:
+                    - generic [ref=f2e1269]:
+                      - generic [ref=f2e1270]:
+                        - generic [ref=f2e1271]:
+                          - img [ref=f2e1272]
+                          - text: 09/2020 – 12/2020
+                        - generic [ref=f2e1275]:
+                          - img [ref=f2e1276]
+                          - generic [ref=f2e1279]: Tokyo
+                          - generic [ref=f2e1280]: ","
+                          - generic [ref=f2e1281]: Japan
+                      - generic [ref=f2e1282]: Software Engineer
+                      - generic [ref=f2e1283]: Cayto
+                    - generic [ref=f2e1284]:
+                      - generic [ref=f2e1285]:
+                        - generic [ref=f2e1286]:
+                          - img [ref=f2e1287]
+                          - text: 09/2020 – 12/2020
+                        - generic [ref=f2e1290]:
+                          - img [ref=f2e1291]
+                          - generic [ref=f2e1294]: Tokyo
+                          - generic [ref=f2e1295]: ","
+                          - generic [ref=f2e1296]: Japan
+                      - generic [ref=f2e1297]: Software Engineer
+                      - generic [ref=f2e1298]: Cayto
+                    - generic [ref=f2e1300]:
+                      - list
+                      - list [ref=f2e1301]:
+                        - listitem [ref=f2e1302]: iOS and front-end web development with Dart framework, Flutter
+                        - listitem [ref=f2e1303]: iOS and front-end web development with Dart framework, Flutter
+                        - listitem [ref=f2e1304]: Minor backend tasks (Go, SQL, Elasticsearch)
+                        - listitem [ref=f2e1305]: Minor backend tasks (Go, SQL, Elasticsearch)
+                        - listitem [ref=f2e1306]: Github and Bitbucket, AWS, Elastic Stack(Elasticsearch, Kibana), and Firebase, Docker, Docker-compose, Circle CI infrastructure.
+                        - listitem [ref=f2e1307]: Github and Bitbucket, AWS, Elastic Stack(Elasticsearch, Kibana), and Firebase, Docker, Docker-compose, Circle CI infrastructure.
+                  - generic [ref=f2e1309]:
+                    - generic [ref=f2e1310]:
+                      - generic [ref=f2e1311]:
+                        - generic [ref=f2e1312]:
+                          - img [ref=f2e1313]
+                          - text: 12/2019 – 04/2020
+                        - generic [ref=f2e1316]:
+                          - img [ref=f2e1317]
+                          - generic [ref=f2e1320]: Remote
+                          - generic [ref=f2e1321]: ","
+                          - generic [ref=f2e1322]: Japan
+                      - generic [ref=f2e1323]: Front-end web developer, Researcher
+                      - generic [ref=f2e1324]: PHI
+                    - generic [ref=f2e1325]:
+                      - generic [ref=f2e1326]:
+                        - generic [ref=f2e1327]:
+                          - img [ref=f2e1328]
+                          - text: 12/2019 – 04/2020
+                        - generic [ref=f2e1331]:
+                          - img [ref=f2e1332]
+                          - generic [ref=f2e1335]: Remote
+                          - generic [ref=f2e1336]: ","
+                          - generic [ref=f2e1337]: Japan
+                      - generic [ref=f2e1338]: Front-end web developer, Researcher
+                      - generic [ref=f2e1339]: PHI
+                    - generic [ref=f2e1341]:
+                      - list
+                      - list [ref=f2e1342]:
+                        - listitem [ref=f2e1343]: Front-end web development with JavaScript
+                        - listitem [ref=f2e1344]: Front-end web development with JavaScript
+                        - listitem [ref=f2e1345]: DAO research
+                        - listitem [ref=f2e1346]: DAO research
+                        - listitem [ref=f2e1347]: Start-up related works like market research, UI/UX design
+                        - listitem [ref=f2e1348]: Start-up related works like market research, UI/UX design
+                        - listitem [ref=f2e1349]: Github, AWS infrastracture
+                        - listitem [ref=f2e1350]: Github, AWS infrastracture
+                  - generic [ref=f2e1352]:
+                    - generic [ref=f2e1353]:
+                      - generic [ref=f2e1354]:
+                        - generic [ref=f2e1355]:
+                          - img [ref=f2e1356]
+                          - text: 05/2019 – 12/2019
+                        - generic [ref=f2e1359]:
+                          - img [ref=f2e1360]
+                          - generic [ref=f2e1363]: Tokyo
+                          - generic [ref=f2e1364]: ","
+                          - generic [ref=f2e1365]: Japan
+                      - generic [ref=f2e1366]: Front-end web developer
+                      - generic [ref=f2e1367]: idearecord
+                    - generic [ref=f2e1368]:
+                      - generic [ref=f2e1369]:
+                        - generic [ref=f2e1370]:
+                          - img [ref=f2e1371]
+                          - text: 05/2019 – 12/2019
+                        - generic [ref=f2e1374]:
+                          - img [ref=f2e1375]
+                          - generic [ref=f2e1378]: Tokyo
+                          - generic [ref=f2e1379]: ","
+                          - generic [ref=f2e1380]: Japan
+                      - generic [ref=f2e1381]: Front-end web developer
+                      - generic [ref=f2e1382]: idearecord
+                    - generic [ref=f2e1384]:
+                      - list
+                      - list [ref=f2e1385]:
+                        - listitem [ref=f2e1386]: Front-end web development and front-end performance tuning
+                        - listitem [ref=f2e1387]: Front-end web development and front-end performance tuning
+                      - generic [ref=f2e1388]: JavaScript (raw and jQuery), PHP, WordPress
+                      - generic [ref=f2e1389]: JavaScript (raw and jQuery), PHP, WordPress
+                      - list
+                      - list [ref=f2e1390]:
+                        - listitem [ref=f2e1391]: Bitbucket, local rental server infrastracture
+                        - listitem [ref=f2e1392]: Bitbucket, local rental server infrastracture
+                - heading "Education" [level=6] [ref=f2e1394]:
+                  - generic [ref=f2e1396]: Education
+                - generic [ref=f2e1397]:
+                  - heading "Education" [level=6] [ref=f2e1398]:
+                    - generic [ref=f2e1400]: Education
+                  - generic [ref=f2e1402]:
+                    - generic [ref=f2e1403]:
+                      - generic [ref=f2e1404]:
+                        - generic [ref=f2e1405]:
+                          - img [ref=f2e1406]
+                          - text: 10/2018 – 10/2024
+                        - generic [ref=f2e1409]:
+                          - img [ref=f2e1410]
+                          - generic [ref=f2e1413]: Tokyo (almost remote)
+                          - generic [ref=f2e1414]: ","
+                          - generic [ref=f2e1415]: Japan
+                      - generic [ref=f2e1416]: Global Business Administration | Bachelor of Business Administration
+                      - generic [ref=f2e1417]: Business Breakthrough University
+                    - generic [ref=f2e1418]:
+                      - generic [ref=f2e1419]:
+                        - generic [ref=f2e1420]:
+                          - img [ref=f2e1421]
+                          - text: 10/2018 – 10/2024
+                        - generic [ref=f2e1424]:
+                          - img [ref=f2e1425]
+                          - generic [ref=f2e1428]: Tokyo (almost remote)
+                          - generic [ref=f2e1429]: ","
+                          - generic [ref=f2e1430]: Japan
+                      - generic [ref=f2e1431]: Global Business Administration | Bachelor of Business Administration
+                      - generic [ref=f2e1432]: Business Breakthrough University
+                    - generic [ref=f2e1434]:
+                      - generic [ref=f2e1435]: I have learned business here becuase I wanted to develop business and software engineering skills at the same time, and chose Global Business Administration with a thought software engineering skills can be nurtured on my own.
+                      - generic [ref=f2e1436]: I have learned business here becuase I wanted to develop business and software engineering skills at the same time, and chose Global Business Administration with a thought software engineering skills can be nurtured on my own.
+                  - generic [ref=f2e1438]:
+                    - generic [ref=f2e1439]:
+                      - generic [ref=f2e1440]:
+                        - generic [ref=f2e1441]:
+                          - img [ref=f2e1442]
+                          - text: 04/2017 – 09/2018
+                        - generic [ref=f2e1445]:
+                          - img [ref=f2e1446]
+                          - generic [ref=f2e1449]: Saitama
+                          - generic [ref=f2e1450]: ","
+                          - generic [ref=f2e1451]: Tokyo
+                      - generic [ref=f2e1452]: English
+                      - generic [ref=f2e1453]: Dokkyo University
+                    - generic [ref=f2e1454]:
+                      - generic [ref=f2e1455]:
+                        - generic [ref=f2e1456]:
+                          - img [ref=f2e1457]
+                          - text: 04/2017 – 09/2018
+                        - generic [ref=f2e1460]:
+                          - img [ref=f2e1461]
+                          - generic [ref=f2e1464]: Saitama
+                          - generic [ref=f2e1465]: ","
+                          - generic [ref=f2e1466]: Tokyo
+                      - generic [ref=f2e1467]: English
+                      - generic [ref=f2e1468]: Dokkyo University
+                    - generic [ref=f2e1470]:
+                      - generic [ref=f2e1471]: I dropped for transferring university.
+                      - generic [ref=f2e1472]: I dropped for transferring university.
+                - heading "Skills" [level=6] [ref=f2e1474]:
+                  - generic [ref=f2e1476]: Skills
+                - generic [ref=f2e1477]:
+                  - heading "Skills" [level=6] [ref=f2e1478]:
+                    - generic [ref=f2e1480]: Skills
+                  - generic [ref=f2e1483]:
+                    - img [ref=f2e1484]
+                    - text: Development Skills
+                  - generic [ref=f2e1488]:
+                    - generic [ref=f2e1489]:
+                      - img [ref=f2e1490]
+                      - text: Development Skills
+                    - generic [ref=f2e1493]:
+                      - generic [ref=f2e1495]: JavaScript
+                      - generic [ref=f2e1500]: JavaScript
+                      - generic [ref=f2e1505]: TypeScript
+                      - generic [ref=f2e1510]: TypeScript
+                      - generic [ref=f2e1515]: Node.js
+                      - generic [ref=f2e1520]: Node.js
+                      - generic [ref=f2e1525]: Solidity
+                      - generic [ref=f2e1530]: Solidity
+                      - generic [ref=f2e1535]: Dart
+                      - generic [ref=f2e1540]: Dart
+                      - generic [ref=f2e1545]: Go
+                      - generic [ref=f2e1550]: Go
+                      - generic [ref=f2e1555]: Rust
+                      - generic [ref=f2e1560]: Rust
+                      - generic [ref=f2e1565]: WebGL
+                      - generic [ref=f2e1570]: WebGL
+                      - generic [ref=f2e1575]: GCP/Firebase
+                      - generic [ref=f2e1580]: GCP/Firebase
+                      - generic [ref=f2e1585]: AWS
+                      - generic [ref=f2e1590]: AWS
+                      - generic [ref=f2e1595]: Docker
+                      - generic [ref=f2e1600]: Docker
+                      - generic [ref=f2e1605]: Docker-compose
+                      - generic [ref=f2e1610]: Docker-compose
+                      - generic [ref=f2e1615]: CI/CD
+                      - generic [ref=f2e1620]: CI/CD
+                      - generic [ref=f2e1625]: SQL
+                      - generic [ref=f2e1630]: SQL
+                      - generic [ref=f2e1635]: NoSQL
+                      - generic [ref=f2e1640]: NoSQL
+                      - generic [ref=f2e1645]: Elastic Stack
+                      - generic [ref=f2e1650]: Elastic Stack
+                      - generic [ref=f2e1655]: UI/UX design
+                      - generic [ref=f2e1660]: UI/UX design
+                      - generic [ref=f2e1665]: Figma
+                      - generic [ref=f2e1670]: Figma
+                  - generic [ref=f2e1676]:
+                    - img [ref=f2e1677]
+                    - text: Languages
+                  - generic [ref=f2e1681]:
+                    - generic [ref=f2e1682]:
+                      - img [ref=f2e1683]
+                      - text: Languages
+                    - generic [ref=f2e1686]:
+                      - generic [ref=f2e1688]: Japanese
+                      - generic [ref=f2e1693]: Japanese
+                      - generic [ref=f2e1698]: English
+                      - generic [ref=f2e1703]: English
+                      - generic [ref=f2e1708]: French
+                      - generic [ref=f2e1713]: French
+                      - generic [ref=f2e1718]: Spanish
+                      - generic [ref=f2e1723]: Spanish
+                - generic [ref=f2e1727]:
+                  - heading "Strengths and Traits" [level=6] [ref=f2e1728]:
+                    - generic [ref=f2e1730]: Strengths and Traits
+                  - generic [ref=f2e1731]:
+                    - generic [ref=f2e1734]: Lean Startup
+                    - generic [ref=f2e1737]: Teamwork
+                    - generic [ref=f2e1740]: Flexibility
+                    - generic [ref=f2e1743]: Creativity
+                    - generic [ref=f2e1746]: Dedication
+                    - generic [ref=f2e1749]: Passion
+                    - generic [ref=f2e1752]: Honesty
+                - generic [ref=f2e1753]:
+                  - heading "Strengths and Traits" [level=6] [ref=f2e1754]:
+                    - generic [ref=f2e1756]: Strengths and Traits
+                  - generic [ref=f2e1757]:
+                    - generic [ref=f2e1760]: Lean Startup
+                    - generic [ref=f2e1763]: Teamwork
+                    - generic [ref=f2e1766]: Flexibility
+                    - generic [ref=f2e1769]: Creativity
+                    - generic [ref=f2e1772]: Dedication
+                    - generic [ref=f2e1775]: Passion
+                    - generic [ref=f2e1778]: Honesty
+                - heading "Hobbies" [level=6] [ref=f2e1780]:
+                  - generic [ref=f2e1782]: Hobbies
+                - generic [ref=f2e1783]:
+                  - heading "Hobbies" [level=6] [ref=f2e1784]:
+                    - generic [ref=f2e1786]: Hobbies
+                  - generic [ref=f2e1787]:
+                    - generic [ref=f2e1788]:
+                      - img [ref=f2e1790]
+                      - generic [ref=f2e1793]: Music
+                    - generic [ref=f2e1794]:
+                      - img [ref=f2e1796]
+                      - generic [ref=f2e1798]: Technologies
+                    - generic [ref=f2e1799]:
+                      - img [ref=f2e1801]
+                      - generic [ref=f2e1804]: Reading
+                  - generic [ref=f2e1805]:
+                    - generic [ref=f2e1806]:
+                      - img [ref=f2e1808]
+                      - generic [ref=f2e1811]: Music
+                    - generic [ref=f2e1812]:
+                      - img [ref=f2e1814]
+                      - generic [ref=f2e1816]: Technologies
+                    - generic [ref=f2e1817]:
+                      - img [ref=f2e1819]
+                      - generic [ref=f2e1822]: Reading
+                  - generic [ref=f2e1823]:
+                    - generic [ref=f2e1824]:
+                      - img [ref=f2e1826]
+                      - generic [ref=f2e1828]: Finding good restaurants
+                    - generic [ref=f2e1829]:
+                      - img [ref=f2e1831]
+                      - generic [ref=f2e1833]: Workout
+                    - generic [ref=f2e1834]:
+                      - img [ref=f2e1836]
+                      - generic [ref=f2e1838]: Well-being
+                  - generic [ref=f2e1839]:
+                    - generic [ref=f2e1840]:
+                      - img [ref=f2e1842]
+                      - generic [ref=f2e1844]: Finding good restaurants
+                    - generic [ref=f2e1845]:
+                      - img [ref=f2e1847]
+                      - generic [ref=f2e1849]: Workout
+                    - generic [ref=f2e1850]:
+                      - img [ref=f2e1852]
+                      - generic [ref=f2e1854]: Well-being
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - heading "Share my resume" [level=4] [ref=e38]
+              - generic [ref=e39]: Spread the word and help me get hired.
+            - generic [ref=e41]:
+              - button [ref=e42] [cursor=pointer]:
+                - img [ref=e43]
+              - button [ref=e46] [cursor=pointer]:
+                - img [ref=e47]
+              - button [ref=e50] [cursor=pointer]:
+                - img [ref=e51]
+              - button [ref=e54] [cursor=pointer]:
+                - img [ref=e55]
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - img [ref=e60]
+              - generic [ref=e64]:
+                - heading "Do you like this resume?" [level=4] [ref=e65]
+                - generic [ref=e66]: Join millions of successful job seekers worldwide who got hired with resumes just like this one.
+            - link "Try Kickresume" [ref=e67] [cursor=pointer]:
+              - /url: /
+      - region "Notifications Alt+T"
+  - iframe [ref=e68]:
+    

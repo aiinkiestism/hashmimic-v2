@@ -11,6 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "build:og": "OG_BUILD=1 next build && OG_BUILD=1 node scripts/build-og.mjs",
     "prettier": "prettier src/ --write",
     "fmt": "pnpm prettier && pnpm lint",
     "com": "dlx shadcn-ui@latest add"
@@ -60,6 +61,7 @@
     "eslint-config-prettier": "^10.1.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
+    "playwright": "^1.60.0",
     "postcss": "^8",
     "prettier": "^3.8.0",
     "tailwindcss": "^4.2.4",
