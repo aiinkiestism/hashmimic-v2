@@ -1,0 +1,5 @@
+allowBuilds:
+  '@heroui/shared-utils': true
+  keccak: true
+  sharp: true
+  unrs-resolver: true
