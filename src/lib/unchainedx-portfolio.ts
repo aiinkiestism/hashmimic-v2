@@ -111,14 +111,40 @@ export async function fetchUnchainedXProjects(): Promise<PortfolioProject[]> {
   try {
     const res = await fetch(PORTFOLIO_URL, {
       next: { revalidate: REVALIDATE_SECONDS },
-      headers: { accept: "text/x-script, */*" },
+      headers: {
+        accept: "text/x-script, */*",
+        // unchainedx.io is fronted by Cloudflare, whose bot protection tends to
+        // block datacenter egress (e.g. Vercel's serverless functions) when the
+        // request lacks a browser-like User-Agent — so the fetch works locally
+        // but returns empty in production. Sending browser headers lets it
+        // through from the server runtime too.
+        "user-agent":
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        referer: "https://unchainedx.io/portfolio",
+      },
     });
-    if (!res.ok) return [];
+    if (!res.ok) {
+      console.error(
+        `[portfolio] upstream fetch failed: ${res.status} ${res.statusText} (${PORTFOLIO_URL})`,
+      );
+      return [];
+    }
     const text = await res.text();
+    // A Cloudflare challenge answers 200 with an HTML interstitial instead of
+    // the turbo-stream array; catch that here so it's logged rather than
+    // silently swallowed by the JSON.parse throw below.
+    if (!text.trimStart().startsWith("[")) {
+      console.error(
+        `[portfolio] unexpected upstream body (not turbo-stream): ${text.slice(0, 200)}`,
+      );
+      return [];
+    }
     return normalize(decodeTurboStream(text));
-  } catch {
-    // Upstream hiccups must not break the page render; the static studio
-    // tiles still appear and the dynamic list just stays empty.
+  } catch (err) {
+    // Upstream hiccups must not break the page render; the static studio tiles
+    // still appear and the dynamic list just stays empty — but log it so the
+    // failure is visible in production instead of vanishing.
+    console.error("[portfolio] fetch/decode threw:", err);
     return [];
   }
 }
