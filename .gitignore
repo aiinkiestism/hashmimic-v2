@@ -40,3 +40,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# pnpm: this file (a local pnpm 10+ build-approval list) breaks Vercel's
+# pnpm 9 build — pnpm 9 reads it as a workspace def and fails on the missing
+# `packages:` field. pnpm 9 runs dependency build scripts by default anyway, so
+# it's not needed in the repo. Kept local-only.
+pnpm-workspace.yaml
