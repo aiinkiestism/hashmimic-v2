@@ -1,5 +1,5 @@
 import { AppHeroUIProvider } from "@/providers";
-import { NavigationLayer } from "@/components";
+import { NavigationLayer, ThreeConsoleFilter } from "@/components";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Dancing_Script } from "next/font/google";
@@ -7,29 +7,6 @@ import AnimatedCursor from "react-animated-cursor"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const dancingScript = Dancing_Script({ subsets: ["latin"], variable: "--font-dancing-script" });
-
-// Inline filter for the upstream "THREE.Clock: This module has been deprecated"
-// log emitted by three@0.184 inside the Clock constructor (each <Canvas> in
-// @react-three/fiber 9 instantiates a Clock for `state.clock`). It needs to
-// run BEFORE any THREE module is evaluated, which means before any client
-// component module loads — hence as a synchronous head script rather than
-// from a "use client" file. Covers warn/log/info/error so the dev terminal
-// "[browser]" forwarder doesn't surface it via a different channel.
-const SUPPRESS_THREE_CLOCK_WARN = `
-(function(){
-  if (window.__hashmimicWarnFilter) return;
-  window.__hashmimicWarnFilter = true;
-  var match = "THREE.Clock: This module has been deprecated";
-  ["warn","log","info","error"].forEach(function(m){
-    var orig = console[m].bind(console);
-    console[m] = function(){
-      var first = arguments[0];
-      if (typeof first === "string" && first.indexOf(match) !== -1) return;
-      orig.apply(null, arguments);
-    };
-  });
-})();
-`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hashmimic.com"),
@@ -70,13 +47,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: SUPPRESS_THREE_CLOCK_WARN }} />
-      </head>
       <body
         className={`${inter.variable} ${dancingScript.variable} ${inter.className}`}
         suppressHydrationWarning
       >
+        <ThreeConsoleFilter />
         <AppHeroUIProvider>
           {/* NavigationLayer lives at the root so it spans every route —
               including /not-found — without being torn down on cross-route
