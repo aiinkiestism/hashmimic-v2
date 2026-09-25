@@ -9,14 +9,14 @@ import { proxyThumbnail, type PortfolioProject } from "@/lib/unchainedx-portfoli
 
 const STUDIO_ICON = {
   unchainedx: "/unchainedx-icon.png",
-  devfriendsdao: "/devfriendsdao-icon.svg",
+  unchainedxdao: "/unchainedxdao-icon.png",
 } as const;
 
 // Glyph used as the default project tile when an upstream entry has no
 // thumbnail — Hashmimic's `#` rendered with the page's Dancing Script face.
 const DEFAULT_GLYPH = "#";
 
-[STUDIO_ICON.unchainedx, STUDIO_ICON.devfriendsdao].forEach(
+[STUDIO_ICON.unchainedx, STUDIO_ICON.unchainedxdao].forEach(
   (src) => useTexture.preload(src),
 );
 
@@ -57,7 +57,8 @@ export function PortfolioClient({ projects }: PortfolioClientProps) {
 
   const items: Item[] = [
     { kind: "texture", src: STUDIO_ICON.unchainedx, url: "https://unchainedx.io/", key: "studio:unchainedx" },
-    { kind: "texture", src: STUDIO_ICON.devfriendsdao, url: "https://devfriendsdao.com/", key: "studio:devfriendsdao" },
+    { kind: "texture", src: STUDIO_ICON.unchainedxdao, url: "https://unchainedxdao.io/", key: "studio:unchainedxdao" },
+    { kind: "glyph", glyph: DEFAULT_GLYPH, url: "https://github.com/aiinkiestism/kinketsu", key: "project:kinketsu" },
     ...projects.map((p): Item =>
       p.thumbnail
         ? { kind: "texture", src: proxyThumbnail(p.thumbnail), url: p.url, key: `project:${p.url}` }
