@@ -1,14 +1,27 @@
 // Fetches the UnchainedX portfolio so this site stays in sync automatically
 // when projects are added/edited upstream — no manual list to maintain.
 //
-// UnchainedX is built on React Router 7, which exposes its loader data at
-// `<route>.data` in the "turbo-stream" wire format. We hit the public
-// endpoint, decode the pool-with-references format, and project the result
-// down to the small shape (`title`, `url`, `thumbnail`) that the WebGL
-// IconLink layer needs.
+// We read straight from Sanity (the CMS that backs unchainedx.io) via its
+// public query API, rather than scraping unchainedx.io's React Router `.data`
+// endpoint. That endpoint is an internal wire format (turbo-stream) that can
+// change on any deploy, and unchainedx.io sits behind Cloudflare Bot Fight
+// Mode, which challenges datacenter requests (e.g. Vercel) so a server-side
+// fetch just came back empty. Sanity's `apicdn` host is the actual source of
+// truth: a stable, CDN-cached, public read API that isn't behind that WAF.
+//
+// projectId/dataset are public identifiers (they ship in unchainedx.io's
+// client bundle), so there's no secret to configure here.
 
-const PORTFOLIO_URL = "https://unchainedx.io/portfolio.data";
+const SANITY_PROJECT_ID = "vmng2w6s";
+const SANITY_DATASET = "production";
+const SANITY_API_VERSION = "2024-01-01";
 const REVALIDATE_SECONDS = 3600;
+
+// GROQ: dereference the thumbnail image asset to its CDN url and flatten the
+// slug so the shape matches PortfolioProject directly.
+const PROJECTS_QUERY = `*[_type=="project"]|order(order asc){title,"slug":slug.current,description,status,"thumbnail":thumbnail.asset->url,url,order}`;
+
+const PORTFOLIO_URL = `https://${SANITY_PROJECT_ID}.apicdn.sanity.io/v${SANITY_API_VERSION}/data/query/${SANITY_DATASET}?query=${encodeURIComponent(PROJECTS_QUERY)}`;
 
 export interface PortfolioProject {
   title: string;
@@ -19,48 +32,14 @@ export interface PortfolioProject {
   order?: number;
 }
 
-// Turbo-stream encodes data as a flat pool. Index 0 is the root. Strings,
-// numbers and booleans are stored verbatim. Arrays become arrays of pool
-// indices. Objects use `{ "_<keyIdx>": valueIdx }` where the property name is
-// `pool[keyIdx]` and the value is `pool[valueIdx]`. Negative indices are
-// sentinel slots (e.g. POSITIVE_INFINITY=-5 in turbo-stream's protocol);
-// none of them carry a value we care about, so we treat all negatives as
-// `undefined`. We resolve lazily with a memoising visitor to handle cycles.
-function decodeTurboStream(payload: string): unknown {
-  const pool = JSON.parse(payload) as unknown[];
-  const cache = new Map<number, unknown>();
-
-  const resolve = (idx: unknown): unknown => {
-    if (typeof idx !== "number" || idx < 0) return undefined;
-    if (cache.has(idx)) return cache.get(idx);
-    const cell = pool[idx];
-
-    if (Array.isArray(cell)) {
-      const arr: unknown[] = [];
-      cache.set(idx, arr);
-      for (const ref of cell) arr.push(resolve(ref));
-      return arr;
-    }
-
-    if (cell !== null && typeof cell === "object") {
-      const obj: Record<string, unknown> = {};
-      cache.set(idx, obj);
-      for (const [encodedKey, valueRef] of Object.entries(cell as Record<string, unknown>)) {
-        if (!encodedKey.startsWith("_")) continue;
-        const keyIdx = Number.parseInt(encodedKey.slice(1), 10);
-        if (Number.isNaN(keyIdx)) continue;
-        const keyName = resolve(keyIdx);
-        if (typeof keyName !== "string") continue;
-        obj[keyName] = resolve(valueRef);
-      }
-      return obj;
-    }
-
-    cache.set(idx, cell);
-    return cell;
-  };
-
-  return resolve(0);
+interface SanityProject {
+  title?: unknown;
+  slug?: unknown;
+  description?: unknown;
+  status?: unknown;
+  thumbnail?: unknown;
+  url?: unknown;
+  order?: unknown;
 }
 
 function asString(v: unknown): string | undefined {
@@ -71,25 +50,21 @@ function isHttpUrl(v: unknown): v is string {
   return typeof v === "string" && /^https?:\/\//i.test(v);
 }
 
-function normalize(raw: unknown): PortfolioProject[] {
-  const root = raw as Record<string, unknown> | null;
-  const route = root?.["routes/portfolio"] as Record<string, unknown> | undefined;
-  const data = route?.data as Record<string, unknown> | undefined;
-  const projects = data?.projects;
+function normalize(projects: unknown): PortfolioProject[] {
   if (!Array.isArray(projects)) return [];
 
   const out: PortfolioProject[] = [];
   for (const raw of projects) {
     if (!raw || typeof raw !== "object") continue;
-    const p = raw as Record<string, unknown>;
+    const p = raw as SanityProject;
 
     const title = asString(p.title);
     if (!title) continue;
 
     // URL preference: explicit `url` (external project link) → fall back to
     // the upstream portfolio detail page derived from the Sanity slug.
-    const slug = (p.slug as Record<string, unknown> | undefined)?.current;
-    const fallbackUrl = typeof slug === "string" ? `https://unchainedx.io/portfolio/${slug}` : null;
+    const slug = asString(p.slug);
+    const fallbackUrl = slug ? `https://unchainedx.io/portfolio/${slug}` : null;
     const url = isHttpUrl(p.url) ? p.url : fallbackUrl;
     if (!url) continue;
 
@@ -103,6 +78,8 @@ function normalize(raw: unknown): PortfolioProject[] {
     });
   }
 
+  // Sanity already orders by `order asc`, but keep a stable client-side sort in
+  // case any entry is missing the field.
   out.sort((a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER));
   return out;
 }
@@ -111,40 +88,19 @@ export async function fetchUnchainedXProjects(): Promise<PortfolioProject[]> {
   try {
     const res = await fetch(PORTFOLIO_URL, {
       next: { revalidate: REVALIDATE_SECONDS },
-      headers: {
-        accept: "text/x-script, */*",
-        // unchainedx.io is fronted by Cloudflare, whose bot protection tends to
-        // block datacenter egress (e.g. Vercel's serverless functions) when the
-        // request lacks a browser-like User-Agent — so the fetch works locally
-        // but returns empty in production. Sending browser headers lets it
-        // through from the server runtime too.
-        "user-agent":
-          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-        referer: "https://unchainedx.io/portfolio",
-      },
+      headers: { accept: "application/json" },
     });
     if (!res.ok) {
-      console.error(
-        `[portfolio] upstream fetch failed: ${res.status} ${res.statusText} (${PORTFOLIO_URL})`,
-      );
+      console.error(`[portfolio] sanity query failed: ${res.status} ${res.statusText}`);
       return [];
     }
-    const text = await res.text();
-    // A Cloudflare challenge answers 200 with an HTML interstitial instead of
-    // the turbo-stream array; catch that here so it's logged rather than
-    // silently swallowed by the JSON.parse throw below.
-    if (!text.trimStart().startsWith("[")) {
-      console.error(
-        `[portfolio] unexpected upstream body (not turbo-stream): ${text.slice(0, 200)}`,
-      );
-      return [];
-    }
-    return normalize(decodeTurboStream(text));
+    const body = (await res.json()) as { result?: unknown };
+    return normalize(body.result);
   } catch (err) {
     // Upstream hiccups must not break the page render; the static studio tiles
     // still appear and the dynamic list just stays empty — but log it so the
     // failure is visible in production instead of vanishing.
-    console.error("[portfolio] fetch/decode threw:", err);
+    console.error("[portfolio] sanity fetch/parse threw:", err);
     return [];
   }
 }
