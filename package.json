@@ -33,7 +33,7 @@
     "clsx": "^2.0.0",
     "ethers": "^6.17.0",
     "framer-motion": "^12.42.2",
-    "lucide-react": "^0.284.0",
+    "lucide-react": "^1.47.0",
     "meshline": "^3.1.6",
     "next": "^16.2.9",
     "postprocessing": "^6.39.2",
