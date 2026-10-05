@@ -13,6 +13,19 @@ updates:
       prefix: "chore(deps)"
       prefix-development: "chore(deps-dev)"
       include: "scope"
+    ignore:
+      # Breaking majors we're deliberately deferring — stop Dependabot from
+      # re-opening them every month. Upgrade manually when ready (these each
+      # need coordinated work: HeroUI v3 migration, and viem v2 + abitype v1
+      # move together with wagmi). Minor/patch for them still flow through.
+      - dependency-name: "@heroui/react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "viem"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "abitype"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "framer-motion"
+        update-types: ["version-update:semver-major"]
     groups:
       # Bundle non-breaking minor + patch updates into a single PR per group
       # to keep review noise low. Major bumps stay as individual PRs.
