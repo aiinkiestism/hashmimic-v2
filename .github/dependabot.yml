@@ -26,6 +26,11 @@ updates:
         update-types: ["version-update:semver-major"]
       - dependency-name: "framer-motion"
         update-types: ["version-update:semver-major"]
+      # lucide-react's latest is already installed (1.52.0); Dependabot kept
+      # proposing a bogus *downgrade* to 1.50.0. Ignore anything below the
+      # current latest so it stops re-opening that PR; real 1.52+ updates flow.
+      - dependency-name: "lucide-react"
+        versions: ["< 1.52.0"]
     groups:
       # Bundle non-breaking minor + patch updates into a single PR per group
       # to keep review noise low. Major bumps stay as individual PRs.
